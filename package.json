@@ -1,0 +1,17 @@
+{
+  "name": "agri-voice",
+  "version": "1.0.0",
+  "description": "This a Agriculture voice assistant",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Revanth",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "mongoose": "^8.0.4"
+  }
+}
