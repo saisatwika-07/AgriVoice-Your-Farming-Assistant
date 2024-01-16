@@ -36,16 +36,20 @@
                     
                     <div class="form-input-item">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="email" placeholder="Email" required>
+                        <input type="email" placeholder="Email" required name="userEmail">
                     </div>
                     <div class="form-input-item">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Enter Password" required>
+                        <input type="password" placeholder="Enter Password" required name="password">
                     </div>
                     
                     
                     <div class="submit-btn-container">
-                        <p class="text-danger" id="errorMessage"></p>
+                        <!-- Display error message if it exists -->
+                        {{#if error}}
+                            <p id="errorMessage" class="text-danger">{{error}}</p>
+                        {{/if}}
+
                         <button class="btn">Sign In</button>
                     </div>
                 </form>

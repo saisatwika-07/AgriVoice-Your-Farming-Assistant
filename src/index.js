@@ -4,6 +4,7 @@ import hbs from "hbs";
 import mongoose from "mongoose";
 
 import  userDetails from "./mongodb.js";
+import { log } from "console";
 
 const app = express();
 const port = 3000;
@@ -35,6 +36,8 @@ app.get("/register",function(req,res){
     res.render("register")
 });
 
+
+//User registration on form submission
 app.post("/register",async(req,res)=>{
 
     try {
@@ -48,7 +51,7 @@ app.post("/register",async(req,res)=>{
         // If user doesn't exist, proceed with registration
         const formData = new userDetails({
             userName: req.body.userName,
-            userEmail: req.body.userEmail,
+            userEmail: req.body.userEmail.toLowerCase(),
             password: req.body.password
         });
 
@@ -66,5 +69,33 @@ app.post("/register",async(req,res)=>{
         console.error("Error checking user existence:", error);
         res.status(500).render("register", { error: "Internal Server Error, Please try again." });
     }
-})
+});
 
+//User login validation
+app.post("/login",async(req,res)=>{
+
+    var loginEmail = req.body.userEmail.toLowerCase();
+    var loginPassword = req.body.password;
+
+    try {
+        const existingUser = await userDetails.findOne({ userEmail: loginEmail });
+        //checking if user is present in DB or not
+        if (existingUser) {
+            //checking if password matches with user or not
+            if(existingUser.password === loginPassword){
+                console.log("Login Successful");
+                return res.render("home");
+            }else{
+                let errorMessage = "Wrong password, please recheck again.";
+                return res.render("login", { error: errorMessage });
+            }
+            
+        }else{
+            let errorMessage = "Email not found in records, please Register";
+            return res.render("login", { error: errorMessage });
+        }
+    } catch (error) {
+        console.error("Error checking user existence:", error);
+        res.status(500).render("login", { error: "Internal Server Error, Please try again." });
+    }
+})
