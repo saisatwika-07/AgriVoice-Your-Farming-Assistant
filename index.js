@@ -17,7 +17,11 @@ app.use(express.urlencoded({extended:false}));
 
 // Setting up express-session for storing user authentication
 
+const RedisStore = connectRedis(session);
+const redisClient = redis.createClient();
+
 app.use(session({
+    store: new RedisStore({ client: redisClient }),
     secret: 'Mlrit_cse03', // Change this to a strong, unique key
     resave: false,
     saveUninitialized: true,
