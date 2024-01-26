@@ -21,8 +21,8 @@ app.use(session({
     secret: 'Mlrit_cse03', // Change this to a strong, unique key
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false,
-              maxAge: 86400000} // Set to true if using HTTPS
+    cookie: { secure: true,  // Set to true if using HTTPS
+              maxAge: 86400000}
 }));
 
 //connect to cloud mongoDB
