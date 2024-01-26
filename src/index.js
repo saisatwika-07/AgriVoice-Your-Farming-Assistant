@@ -152,3 +152,9 @@ app.post("/logout", (req, res) => {
         res.redirect("/");
     });
 });
+
+
+app.post('/webhook', (req, res) => {
+    console.log('Received webhook:', req.body);
+    res.sendStatus(200);
+});
