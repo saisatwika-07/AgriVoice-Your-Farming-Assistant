@@ -17,17 +17,13 @@ app.use(express.urlencoded({extended:false}));
 
 // Setting up express-session for storing user authentication
 
-const RedisStore = connectRedis(session);
-const redisClient = redis.createClient();
-
-app.use(session({
-    store: new RedisStore({ client: redisClient }),
-    secret: 'Mlrit_cse03', // Change this to a strong, unique key
-    resave: false,
-    saveUninitialized: true,
-    cookie: { secure: true,  // Set to true if using HTTPS
-              maxAge: 86400000}
-}));
+// app.use(session({
+//     secret: 'Mlrit_cse03', // Change this to a strong, unique key
+//     resave: false,
+//     saveUninitialized: true,
+//     cookie: { secure: true,  // Set to true if using HTTPS
+//               maxAge: 86400000}
+// }));
 
 //connect to cloud mongoDB
 const mongoURL = "mongodb+srv://revanthdanduboina:Welcome123@logindetails.qab1dl6.mongodb.net/?retryWrites=true&w=majority";
@@ -43,7 +39,7 @@ mongoose.connect(mongoURL).then(()=>{
 
 
 app.get("/",function(req,res){
-    if(req.session.user){
+    if(true){
         return res.redirect("/home");
     }
     
@@ -51,7 +47,7 @@ app.get("/",function(req,res){
 });
 
 app.get("/register",function(req,res){
-    if(req.session.user){
+    if(true){
         return res.redirect("/home");
     }
 
@@ -59,7 +55,7 @@ app.get("/register",function(req,res){
 });
 
 const isAuthenticated = (req, res, next) => {
-    if (req.session.user) {
+    if (true) {
         // User is authenticated, proceed to the next middleware or route handler
         next();
     } else {
@@ -122,11 +118,11 @@ app.post("/login",async(req,res)=>{
                 console.log("Login Successful");
                 
                 //Storeing user login authuntication details in session
-                req.session.user = {
-                    userName: existingUser.userName,
-                    userEmail: existingUser.userEmail,
-                    password: existingUser.password
-                };
+                // req.session.user = {
+                //     userName: existingUser.userName,
+                //     userEmail: existingUser.userEmail,
+                //     password: existingUser.password
+                // };
 
                 return res.redirect("/home");
             }else{
