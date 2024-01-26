@@ -1,10 +1,10 @@
 import express from "express";
+import session from "express-session";
 import path from "path";
 import hbs from "hbs";
 import mongoose from "mongoose";
 
 import  userDetails from "./mongodb.js";
-import { log } from "console";
 
 const app = express();
 const port = 3000;
@@ -14,6 +14,16 @@ app.use(express.static('public'));
 app.use(express.json());
 app.set("view engine","hbs");
 app.use(express.urlencoded({extended:false}));
+
+// Setting up express-session for storing user authentication
+
+app.use(session({
+    secret: 'Mlrit_cse03', // Change this to a strong, unique key
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false,
+              maxAge: 86400000} // Set to true if using HTTPS
+}));
 
 //connect to cloud mongoDB
 const mongoURL = "mongodb+srv://revanthdanduboina:Welcome123@logindetails.qab1dl6.mongodb.net/?retryWrites=true&w=majority";
@@ -29,12 +39,34 @@ mongoose.connect(mongoURL).then(()=>{
 
 
 app.get("/",function(req,res){
+    if(req.session.user){
+        return res.redirect("/home");
+    }
+    
     res.render("login")
 });
 
 app.get("/register",function(req,res){
+    if(req.session.user){
+        return res.redirect("/home");
+    }
+
     res.render("register")
 });
+
+const isAuthenticated = (req, res, next) => {
+    if (req.session.user) {
+        // User is authenticated, proceed to the next middleware or route handler
+        next();
+    } else {
+        res.redirect("/");
+    }
+};
+
+app.get("/home", isAuthenticated, (req, res) => {
+    res.render("home");
+});
+
 
 
 //User registration on form submission
@@ -58,7 +90,7 @@ app.post("/register",async(req,res)=>{
         formData.save()
             .then((result) => {
                 console.log("Registration successful");
-                res.render("home");
+                res.redirect("/");
             })
             .catch((err) => {
                 console.log("Registration Failed");
@@ -84,7 +116,15 @@ app.post("/login",async(req,res)=>{
             //checking if password matches with user or not
             if(existingUser.password === loginPassword){
                 console.log("Login Successful");
-                return res.render("home");
+                
+                //Storeing user login authuntication details in session
+                req.session.user = {
+                    userName: existingUser.userName,
+                    userEmail: existingUser.userEmail,
+                    password: existingUser.password
+                };
+
+                return res.redirect("/home");
             }else{
                 let errorMessage = "Wrong password, please recheck again.";
                 return res.render("login", { error: errorMessage });
@@ -99,3 +139,16 @@ app.post("/login",async(req,res)=>{
         res.status(500).render("login", { error: "Internal Server Error, Please try again." });
     }
 })
+
+
+//User logout logic
+
+app.post("/logout", (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            console.error("Error destroying session:", err);
+        }
+        // Redirect to the login page or any other desired page after logout
+        res.redirect("/");
+    });
+});
