@@ -1,0 +1,593 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: weather
+  examples: |
+   - What's the forecast for today?
+   - Can you tell me about today's weather conditions?
+   - Is it going to be sunny or cloudy today?
+   - Any chance of snow today?
+   - Will there be any storms today?
+   - Do I need an umbrella for today?
+   - Could you give me the weather update for today?
+   - Is it going to be hot or cold today?
+   - What's the temperature going to be like today?
+   - Are there any weather advisories for today?
+   - Will there be any strong winds today?
+
+- intent: ask_crop_recommendation
+  examples: |
+    - What crops are suitable for planting in the summer season?
+    - What can I plant during the summer?
+    - Which crops thrive in summer?
+
+- intent: prevent_pests
+  examples: |
+    - How can I prevent pests from damaging my crops?
+    - What methods can I use to protect my plants from pests?
+    - Any tips for pest control in the garden?
+
+- intent: ideal_strawberry_pH
+  examples: |
+    - What is the ideal pH level for growing strawberries?
+    - What pH do strawberries prefer?
+    - How to adjust soil pH for strawberries?
+
+- intent: water_amount_tomato_plants
+  examples: |
+    - How much water should I give to my tomato plants?
+    - What's the watering requirement for tomatoes?
+    - How often should I water my tomato plants?
+
+- intent: common_potato_diseases
+  examples: |
+    - What are some common diseases that affect potato plants?
+    - How can I prevent diseases in my potato crop?
+    - Potato plant problems?
+
+- intent: harvest_time_wheat
+  examples: |
+    - When is the best time to harvest wheat?
+    - How do I know when wheat is ready for harvest?
+    - Wheat harvesting period?
+
+- intent: improve_soil_fertility
+  examples: |
+    - How can I improve the fertility of my soil?
+    - Tips for enriching garden soil?
+    - Soil fertility enhancement methods?
+    - How can I improve the fertility of my soil for better crop yields?
+    - Strategies for enhancing soil fertility?
+    - Soil fertility improvement techniques?
+
+- intent: sustainable_farming_practices
+  examples: |
+    - What are some sustainable farming practices?
+    - How to practice eco-friendly farming?
+    - Sustainable agriculture techniques?
+
+- intent: drip_irrigation_benefits
+  examples: |
+    - What are the benefits of using drip irrigation?
+    - Advantages of drip irrigation over other methods?
+    - Why choose drip irrigation?
+
+- intent: identify_nutrient_deficiencies
+  examples: |
+    - How can I identify nutrient deficiencies in my plants?
+    - Signs of nutrient deficiency in garden plants?
+    - Plant nutrient deficiency symptoms?
+
+- intent: crops_for_sandy_soil
+  examples: |
+    - I have sandy soil in my garden. What crops thrive in sandy soil?
+    - Suitable crops for sandy soil?
+    - Sandy soil gardening options?
+
+- intent: crops_for_clayey_soil
+  examples: |
+    - My soil is clayey. What crops are suitable for clayey soil?
+    - What can I plant in clay soil?
+    - Clay soil garden plants?
+
+- intent: crops_for_acidic_soil
+  examples: |
+    - I live in a region with acidic soil. What crops can I grow?
+    - Acidic soil garden crops?
+    - Acid-loving plants for acidic soil?
+
+- intent: crops_for_alkaline_soil
+  examples: |
+    - What crops thrive in alkaline soil conditions?
+    - Alkaline soil garden options?
+    - Plants for high pH soil?
+
+- intent: crops_for_hot_dry_climate
+  examples: |
+    - I live in a hot and dry climate. What crops are best suited?
+    - Drought-tolerant crops for hot climates?
+    - Hot weather gardening suggestions?
+
+- intent: crops_for_cool_moist_climate
+  examples: |
+    - What crops can I grow in cool and moist weather?
+    - Cool climate garden plants?
+    - Suitable crops for wet climates?
+
+- intent: space_saving_crops
+  examples: |
+    - I have a small garden. What are some space-saving crops?
+    - Compact garden plants?
+    - Small space gardening options?
+
+- intent: pollinator_attracting_crops
+  examples: |
+    - I want to attract pollinators to my garden. What should I plant?
+    - Plants that attract bees and butterflies?
+    - Pollinator-friendly garden crops?
+
+- intent: crops_for_partial_shade
+  examples: |
+    - What crops can I grow in partial shade?
+    - Partially shaded garden plants?
+    - Shade-tolerant crops?
+
+- intent: cover_crop_options
+  examples: |
+    - I want to grow cover crops. What are some good options?
+    - Cover crops for soil improvement?
+    - Green manure options?
+
+- intent: potato_planting_depth
+  examples: |
+    - What is the optimal planting depth for potato seeds?
+    - How deep should I plant potatoes?
+    - Potato seed depth?
+
+- intent: watering_frequency_potatoes
+  examples: |
+    - How often should I water my potato plants?
+    - Potato watering schedule?
+    - Watering potatoes?
+
+- intent: potato_spacing
+  examples: |
+    - What is the recommended spacing between potato plants?
+    - How far apart should potato plants be planted?
+    - Potato plant spacing?
+
+- intent: tomato_leaf_issue
+  examples: |
+    - My tomato plants have curled and distorted leaves. What's wrong?
+    - Tomato leaf problem?
+    - Troubleshooting tomato plant issues?
+
+- intent: apple_tree_issue
+  examples: |
+    - The leaves of my apple tree are covered in small holes and brown spots. What's the problem?
+    - Apple tree leaf damage?
+    - Apple tree pest or disease?
+
+- intent: wheat_disease
+  examples: |
+    - My wheat plants have orange pustules on the leaves. What disease is this?
+    - Wheat plant issue?
+    - Wheat leaf disease?
+
+- intent: cucumber_pest
+  examples: |
+    - I noticed small, yellowish insects on my cucumber leaves. What are they?
+    - Cucumber plant pests?
+    - Cucumber leaf problem?
+
+- intent: grapevine_disease
+  examples: |
+    - My grapevine leaves have brown lesions and are starting to wilt. What disease is affecting them?
+    - Grapevine leaf issue?
+    - Grapevine disease identification?
+
+- intent: pepper_fruit_issue
+  examples: |
+    - My pepper plants have dark, sunken spots on the fruit. What's causing this?
+    - Pepper plant fruit problem?
+    - Pepper fruit issue?
+
+#############################
+
+- intent: identify_disease
+  examples: |
+    - My cabbage plants are covered in fuzzy, grayish mold. What disease is this?
+    - What is the fuzzy, grayish mold covering my cabbage plants?
+- intent: recommend_fungicide
+  examples: |
+    - What fungicide should I use to treat gray mold on cabbage plants?
+    - How can I control gray mold on my cabbage plants?
+- intent: suitable_crops_sandy_soil
+  examples: |
+    - What crops are suitable for sandy soil with low water retention?
+    - Which crops thrive in well-draining sandy soil?
+- intent: suitable_crops_clayey_soil
+  examples: |
+    - Which crops are best for clayey soil with good water retention?
+    - What crops can handle clayey soil?
+- intent: suitable_crops_loamy_soil
+  examples: |
+    - What crops are suitable for loamy soil with balanced texture?
+    - Which crops perform well in loamy soil?
+- intent: nitrogen_fixing_crops
+  examples: |
+    - Which crops are nitrogen-fixing and beneficial for poor soil fertility?
+    - What plants can enhance nitrogen levels in the soil?
+- intent: crops_thriving_saline_soil
+  examples: |
+    - What crops can thrive in saline soil conditions?
+    - Which plants are suitable for soil with high salinity levels?
+- intent: suitable_crops_sandy_loam_soil
+  examples: |
+    - What crops are suitable for well-drained, sandy loam soil?
+    - Which plants do well in sandy loam soil?
+- intent: crops_tolerate_alkaline_soil
+  examples: |
+    - What crops can tolerate alkaline soil conditions?
+    - Which plants can handle higher pH levels in soil?
+- intent: crops_thriving_waterlogged_soil
+  examples: |
+    - What crops are suitable for poorly-drained, waterlogged soil?
+    - Which plants can thrive in waterlogged conditions?
+- intent: crops_well_drained_sandy_soil
+  examples: |
+    - What crops are ideal for well-drained, sandy soil with low organic matter?
+    - Which plants perform well in sandy soil with low organic content?
+- intent: crops_improving_soil_structure
+  examples: |
+    - What crops can break up compacted soil and improve its structure?
+    - Which plants help enhance soil structure?
+- intent: crops_suitable_rocky_soil
+  examples: |
+    - What crops are suitable for rocky soil conditions?
+    - Which plants can adapt to rocky soils?
+- intent: nitrogen_demanding_crops
+  examples: |
+    - Which crops are nitrogen-demanding and thrive in fertile soil?
+    - What plants benefit from nitrogen-rich, fertile soil?
+- intent: crops_raised_beds_containers
+  examples: |
+    - What crops can be grown in raised beds or containers with limited space?
+    - Which plants are suitable for small gardening spaces like raised beds or containers?
+- intent: crops_suitable_high_salinity
+  examples: |
+    - What crops are suitable for soils with high salinity levels?
+    - Which plants are salt-tolerant?
+- intent: crops_prevent_soil_erosion
+  examples: |
+    - What crops are suitable for soil prone to erosion?
+    - Which plants help prevent soil erosion?
+- intent: crops_ideal_organic_farming
+  examples: |
+    - What crops are ideal for organic farming practices in nutrient-rich soil?
+    - Which plants thrive in nutrient-rich soil without synthetic fertilizers?
+- intent: signs_pest_infestation
+  examples: |
+    - What are some common signs of pest infestation in crops?
+    - How can I identify if my plants are infested with pests?
+- intent: effective_pesticides_aphids
+  examples: |
+    - Which pesticides are effective against aphids in vegetable crops?
+    - What can I use to control aphids on my vegetable plants?
+- intent: prevent_pesticide_resistance
+  examples: |
+    - How to prevent the development of pesticide resistance in pests?
+    - What are some strategies to avoid pesticide resistance in pests?
+
+##############################################
+
+- intent: role_of_fungicides
+  examples: |
+    - What is the role of fungicides in preventing crop diseases?
+    - How do fungicides help prevent crop diseases?
+- intent: identify_fungal_diseases
+  examples: |
+    - How to identify the presence of fungal diseases in crops?
+    - What are the symptoms of fungal diseases in crops?
+- intent: biopesticides_for_pest_control
+  examples: |
+    - Are there biopesticides that farmers can use for pest control?
+    - What are biopesticides and how are they used in pest control?
+- intent: importance_of_scouting_for_pests
+  examples: |
+    - What is the importance of scouting for pests in the early stages of crop growth?
+    - Why is it important to scout for pests early in crop development?
+- intent: reduce_environmental_impact_of_pesticide_use
+  examples: |
+    - How to reduce the environmental impact of pesticide use?
+    - What practices can minimize the environmental impact of pesticide application?
+- intent: non_chemical_methods_for_pest_control
+  examples: |
+    - What are some non-chemical methods for controlling pests in organic farming?
+    - How can pests be controlled in organic farming without using chemicals?
+- intent: manage_diseases_without_excessive_reliance_on_pesticides
+  examples: |
+    - How to manage diseases in crops without excessive reliance on pesticides?
+    - What are some alternative methods for disease management in crops?
+- intent: pesticide_for_powdery_mildew
+  examples: |
+    - What pesticide is effective against powdery mildew in crops?
+    - How can powdery mildew be controlled in crops using pesticides?
+- intent: pesticide_for_bacterial_spot_in_tomatoes
+  examples: |
+    - Which pesticide can be used to control bacterial spot in tomatoes?
+    - What pesticide is recommended for managing bacterial spot in tomato plants?
+- intent: pesticide_for_downy_mildew_in_cucurbits
+  examples: |
+    - What pesticide is recommended for managing downy mildew in cucurbits?
+    - How can downy mildew be controlled in cucurbit crops using pesticides?
+- intent: control_aphids_in_crops
+  examples: |
+    - How to control aphids in crops?
+    - What are effective methods for managing aphids in crop production?
+- intent: pesticide_for_corn_borer_in_maize_fields
+  examples: |
+    - What pesticide is suitable for controlling corn borer infestation in maize fields?
+    - How can corn borer infestation be controlled in maize using pesticides?
+- intent: pesticide_for_early_blight_in_potato_crops
+  examples: |
+    - Which pesticide is recommended for managing early blight in potato crops?
+    - How can early blight in potatoes be controlled using pesticides?
+- intent: pesticide_for_whiteflies_in_greenhouse_crops
+  examples: |
+    - What pesticide can be used for the control of whiteflies in greenhouse crops?
+    - How can whiteflies be controlled in greenhouse crops using pesticides?
+- intent: manage_rust_diseases_in_wheat_crops
+  examples: |
+    - How to manage rust diseases in wheat crops?
+    - What are effective methods for controlling rust diseases in wheat?
+- intent: suitable_crops_for_loamy_soil
+  examples: |
+    - Considering the soil composition, what crops would be suitable for my loamy soil with good drainage?
+    - Which crops thrive in loamy soil with good drainage?
+- intent: crops_resistant_to_waterlogging
+  examples: |
+    - In light of the forecasted heavy rainfall, which crops are resistant to waterlogging?
+    - What crops can withstand waterlogging in heavy rainfall conditions?
+- intent: cover_crops_to_improve_soil_fertility_in_clayey_soil
+  examples: |
+    - What cover crops do you recommend to improve soil fertility in my clayey soil?
+    - How can I improve soil fertility in clayey soil using cover crops?
+- intent: salt_tolerant_crops_for_saline_regions
+  examples: |
+    - In our region prone to salinity, what salt-tolerant crops can I consider planting?
+    - Which crops are suitable for saline regions with high soil salinity?
+- intent: crop_varieties_for_acidic_soil
+  examples: |
+    - What crop varieties would you recommend for my acidic soil with a pH below 6.0?
+    - Which crops thrive in acidic soil conditions with low pH levels?
+- intent: winter_cover_crops_for_enhancing_soil_structure
+  examples: |
+    - Given the soil texture and upcoming cool temperatures, what winter cover crops can enhance soil structure?
+    - Which cover crops are suitable for enhancing soil structure in cool weather conditions?
+- intent: optimal_growing_conditions_for_tomato_plants
+  examples: |
+    - What are the optimal growing conditions for tomato plants?
+    - How can I ensure the best growth conditions for my tomato plants?
+- intent: prevent_common_diseases_in_tomato_plants
+  examples: |
+    - How can I prevent common diseases like blight in my tomato plants?
+    - What measures can I take to avoid diseases in tomato plants?
+- intent: ideal_soil_conditions_for_growing_wheat
+  examples: |
+    - What are the ideal soil conditions for growing wheat in my region?
+    - How can I prepare the soil for successful wheat cultivation?
+- intent: protect_barley_crop_from_rust_diseases
+  examples: |
+    - How can I protect my barley crop from rust diseases?
+    - What measures can I take to prevent rust diseases in barley crops?
+
+- intent: minimize_weed_competition
+  examples: |
+    - How can I minimize weed competition in my grain fields?
+    - What are effective weed control measures for grain fields?
+    - Ways to reduce weed competition in grain fields?
+- intent: safety_measures_agricultural_chemicals_equipment
+  examples: |
+    - What safety measures should I follow when using agricultural chemicals and equipment?
+    - How to ensure safety when handling agricultural chemicals and equipment?
+    - Recommended safety guidelines for agricultural chemical usage?
+- intent: enhance_pollination
+  examples: |
+    - How can I enhance pollination in my crops?
+    - What to do if there is a shortage of natural pollinators for crops?
+    - Techniques for enhancing crop pollination?
+- intent: resistant_crop_varieties
+  examples: |
+    - What crop varieties are resistant to common pests and diseases in my region?
+    - Which crop varieties are resilient against pests and diseases locally?
+    - Recommended pest and disease-resistant crop varieties?
+- intent: signs_nutrient_deficiencies
+  examples: |
+    - What are the signs of nutrient deficiencies in plants?
+    - How to identify nutrient deficiencies in plants?
+    - Symptoms of nutrient deficiencies in plants?
+- intent: manage_weeds_without_herbicides
+  examples: |
+    - How can I manage weeds without relying heavily on herbicides?
+    - Alternatives to herbicides for weed management?
+    - Eco-friendly weed control methods without herbicides?
+- intent: organic_fertilizers_effective
+  examples: |
+    - What organic fertilizers are effective for crops?
+    - Effective organic fertilizers for crops?
+    - How to ensure crops receive sufficient nutrients using organic fertilizers?
+- intent: control_pests_organic_farming
+  examples: |
+    - In organic farming, how do I control pests without synthetic pesticides?
+    - Pest control methods in organic farming without synthetic pesticides?
+    - Strategies for organic pest management without synthetic pesticides?
+- intent: treated_seeds_organic_farming
+  examples: |
+    - Can I use treated seeds in organic farming?
+    - Alternatives to treated seeds in organic farming?
+    - Allowed seed treatments in organic farming?
+- intent: manage_soil_fertility_organic_farming
+  examples: |
+    - How do I manage soil fertility in organic farming without synthetic inputs?
+    - Soil fertility management in organic farming?
+    - Organic methods for enhancing soil fertility?
+- intent: crops_suited_organic_farming
+  examples: |
+    - What crops are well-suited for organic farming practices?
+    - Ideal crops for organic farming?
+    - Suitable organic farming crops?
+- intent: enhance_biodiversity_organic_farm
+  examples: |
+    - What strategies can I use to enhance biodiversity on my organic farm?
+    - Biodiversity promotion techniques for organic farms?
+    - Methods for increasing biodiversity in organic farming?
+- intent: high_yield_vegetable_crops_loamy_soil
+  examples: |
+    - What high-yield vegetable crops are recommended for loamy soil and moderate temperatures?
+    - Vegetable crops suitable for loamy soil and moderate temperatures?
+    - Best vegetables for high yield in loamy soil?
+- intent: fruit_trees_good_yield_quality_optimal_soil
+  examples: |
+    - What fruit trees should I plant for a good yield and quality with optimal soil nutrient levels and forecasted rainfall?
+    - Recommended fruit trees for good yield and quality considering soil conditions and rainfall?
+    - Fruit trees for optimal yield and quality based on soil and rainfall conditions?
+- intent: crops_cultivation_moist_soil
+  examples: |
+    - What crops are well-suited for cultivation in consistently moist soil conditions?
+    - Suitable crops for consistently moist soil conditions?
+    - Crop options for moist soil cultivation?
+- intent: cover_crops_moist_soil_prevent_erosion
+  examples: |
+    - What cover crops can be planted in moist soil during the off-season to prevent erosion and enhance soil structure?
+    - Cover crops recommendations for preventing erosion in moist soil?
+    - Moist soil cover crop options to prevent erosion and improve soil structure?
+- intent: prevent_fungal_diseases_high_humidity_moisture
+  examples: |
+    - In regions with high humidity and moisture, what measures can be taken to prevent fungal diseases in crops?
+    - Preventing fungal diseases in crops in high humidity and moisture regions?
+    - Strategies for avoiding fungal diseases in crops in humid conditions?
+- intent: optimize_irrigation_consistently_moist_soil
+  examples: |
+    - How can farmers optimize irrigation practices in consistently moist soil to avoid overwatering?
+    - Irrigation optimization in consistently moist soil conditions?
+    - Best irrigation practices for consistently moist soil?
+- intent: planting_vegetables_consistently_moist_soil
+  examples: |
+    - What are the best practices for planting vegetables in consistently moist soil to ensure optimal growth and yield?
+    - Optimal planting practices for vegetables in consistently moist soil?
+    - Vegetable planting tips for consistent moisture soil conditions?
+- intent: fruit_trees_consistently_moist_soil
+  examples: |
+    - Are there specific fruit trees that thrive in consistently moist soil, and how should they be cared for?
+    - Fruit tree recommendations for consistently moist soil conditions?
+    - Best practices for caring for fruit trees in consistently moist soil?
+- intent: manage_weeds_consistently_moist_soil
+  examples: |
+    - How can farmers manage weed growth in consistently moist soil without compromising crop health?
+    - Weed management strategies in consistently moist soil conditions?
+    - Controlling weeds in consistently moist soil while maintaining crop health?
+- intent: adapt_planting_irrigation_schedules_fluctuating_moisture
+  examples: |
+    - In regions with fluctuating moisture levels, how can farmers adapt their planting and irrigation schedules?
+    - Adjusting planting and irrigation schedules for fluctuating moisture levels?
+    - Adapting farming schedules to fluctuating moisture conditions?
+- intent: cover_crops_dry_soil_prevent_erosion
+  examples: |
+    - What cover crops are recommended for planting in dry soil during the fallow period to prevent soil erosion?
+    - Dry soil cover crop suggestions for erosion prevention during fallow periods?
+    - Cover crop options for erosion control in dry soil?
+- intent: plan_crop_rotations_minimize_drought_impact
+  examples: |
+    - In areas with occasional drought, how can farmers plan crop rotations to minimize the impact on overall yield and soil health?
+    - Crop rotation strategies to mitigate drought impact on yield and soil health?
+    - Planning crop rotations to deal with occasional droughts?

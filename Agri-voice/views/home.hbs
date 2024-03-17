@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri Voice</title>
+
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+     <!-- font awesome CDN -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Styles sheets -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header section -->
+    <header class="title-main-container header-container">
+        <div class="title-container">
+            <div class="title">
+                <h1 class="main-heading">Agri Voice</h1>
+            </div>
+            <div class="sub-title">
+                <h6 class="sub-heading">Your Farming Assistent</h6>
+            </div>
+        </div>
+        <div class="navbar-container">
+            <nav>
+                {{!-- <div class="nav-item">
+                    <a href=""><i class="fa-solid fa-circle-question"></i></a>
+                </div> --}}
+                <div class="nav-item">
+                    <a href="">About</a>
+                </div>
+                {{!-- <div class="nav-item">
+                    <a href="">History</a>
+                </div>
+                <div class="nav-item">
+                    <a href="">Feedback</a>
+                </div> --}}
+                <div class="nav-item logout-item">
+                    <form action="/logout" method="post" onsubmit="return confirmLogout()">
+                        <button class="btn btn-danger py-0" type="submit">Log Out</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Body section -->
+
+    <section class="home-main-container">
+        <div class="left-panel-container">
+            <div class="title-container">
+                <h3 class="title main-heading">Latest News <i class="fa-solid fa-newspaper"></i></h3>
+            </div>
+            <div class="latest-news-container">
+                <div class="news-items">
+
+                    {{#each farmerNews}}
+                        <a href="{{this.url}}" target="_blank">
+                            <div class="news-item">
+                                <p><i class="fa-solid fa-hand-point-right"></i> {{this.title}}</p>
+                                <p class="date">{{this.date}}</p>
+                            </div>
+                        </a>
+                    {{/each}}                    
+                </div>
+            </div>
+        </div>
+        <div class="right-panel-container">
+            <div class="chatbot-main-container">
+                <div class="input-container">
+                    <form action="/postRasa" method="post" class="d-flex flex-column" autocomplete="off">
+                        <select name="language" id="language" class="form-select w-25 mb-2">
+                            <option value="en-Us">English</option>
+                            <option value="te-In">Telugu</option>
+                            <option value="ta-In">Tamil</option>
+                            <option value="hi-IN">Hindi</option>
+                        </select>
+                        <div class="" style="display: grid; grid-template-columns:auto 15%; column-gap:10px;">
+                            <input type="text" placeholder="Your Question Goes Here" name="userInput" autofocus required id="userInput">
+                            <div class="d-flex">
+                                <button type="button" id="startRecord" class="btn btn-primary me-1"><i class="fa-solid fa-microphone"></i></button>
+                                <button type="button" id="stopRecord" disabled class="btn btn-danger me-1"><i class="fa-solid fa-circle-stop"></i></button>
+                                <button type="submit" class="btn btn-success"><i class="fa-solid fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div id="transcription"></div>
+                <div class="output-container">
+                    {{#each combinedData}}
+                    <div class="d-flex justify-content-start">
+                        <p class="rasaMessage">{{rasaResponse}}</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <p class="userMessage">{{userPrompt}}</p>
+                    </div>
+                    {{/each}}
+
+                    
+
+                    
+                    
+                    {{#if rasaIsEmpty}}
+                        <p style="padding: 20% 0;">Ask me anything <i class="fa-regular fa-face-smile-beam"></i>!</p>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="assets/js/speech.js"></script>
+
+
+
+    {{!-- Botpress chatbot widget --}}
+
+    {{!-- <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+    window.botpressWebChat.init({
+        "composerPlaceholder": "Chat with Your Farming Assistant",
+        "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+        "botId": "33c93763-b677-45fc-a5fb-5fd2ab6bf76f",
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+        "messagingUrl": "https://messaging.botpress.cloud",
+        "clientId": "33c93763-b677-45fc-a5fb-5fd2ab6bf76f",
+        "webhookId": "a2235f4e-e97e-44d8-af25-c055bfff6323",
+        "lazySocket": true,
+        "themeName": "prism",
+        "botName": "Your Farming Assistant",
+        "frontendVersion": "v1",
+        "showPoweredBy": true,
+        "theme": "prism",
+        "themeColor": "#2563eb"
+    });
+    </script> --}}
+
+
+
+
+    {{!-- Confirmation for logout --}}
+    <script>
+        function confirmLogout(){
+            if(confirm("Are you sure you want to Log Out?")){
+                return true;
+            }
+
+            return false;
+        }
+    </script>
+
+</body>
+</html>

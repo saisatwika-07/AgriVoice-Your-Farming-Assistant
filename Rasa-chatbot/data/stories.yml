@@ -1,0 +1,481 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: weather path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: weather
+  - action: utter_weather
+
+
+- story: crop_recommendation
+  steps:
+  - intent: ask_crop_recommendation
+  - action: utter_crop_recommendation
+
+- story: pest_prevention
+  steps:
+  - intent: prevent_pests
+  - action: utter_pest_prevention_tips
+
+- story: strawberry_pH
+  steps:
+  - intent: ideal_strawberry_pH
+  - action: utter_strawberry_pH
+
+- story: water_amount_tomato_plants
+  steps:
+  - intent: water_amount_tomato_plants
+  - action: utter_water_amount_tomato_plants
+
+- story: common_potato_diseases
+  steps:
+  - intent: common_potato_diseases
+  - action: utter_common_potato_diseases
+
+- story: harvest_time_wheat
+  steps:
+  - intent: harvest_time_wheat
+  - action: utter_harvest_time_wheat
+
+- story: improve_soil_fertility
+  steps:
+  - intent: improve_soil_fertility
+  - action: utter_improve_soil_fertility
+
+- story: sustainable_farming_practices
+  steps:
+  - intent: sustainable_farming_practices
+  - action: utter_sustainable_farming_practices
+
+- story: drip_irrigation_benefits
+  steps:
+  - intent: drip_irrigation_benefits
+  - action: utter_drip_irrigation_benefits
+
+- story: identify_nutrient_deficiencies
+  steps:
+  - intent: identify_nutrient_deficiencies
+  - action: utter_identify_nutrient_deficiencies
+
+- story: crops_for_sandy_soil
+  steps:
+  - intent: crops_for_sandy_soil
+  - action: utter_crops_for_sandy_soil
+
+- story: crops_for_clayey_soil
+  steps:
+  - intent: crops_for_clayey_soil
+  - action: utter_crops_for_clayey_soil
+
+- story: crops_for_acidic_soil
+  steps:
+  - intent: crops_for_acidic_soil
+  - action: utter_crops_for_acidic_soil
+
+- story: crops_for_alkaline_soil
+  steps:
+  - intent: crops_for_alkaline_soil
+  - action: utter_crops_for_alkaline_soil
+
+- story: crops_for_hot_dry_climate
+  steps:
+  - intent: crops_for_hot_dry_climate
+  - action: utter_crops_for_hot_dry_climate
+
+- story: crops_for_cool_moist_climate
+  steps:
+  - intent: crops_for_cool_moist_climate
+  - action: utter_crops_for_cool_moist_climate
+
+- story: space_saving_crops
+  steps:
+  - intent: space_saving_crops
+  - action: utter_space_saving_crops
+
+- story: pollinator_attracting_crops
+  steps:
+  - intent: pollinator_attracting_crops
+  - action: utter_pollinator_attracting_crops
+
+- story: crops_for_partial_shade
+  steps:
+  - intent: crops_for_partial_shade
+  - action: utter_crops_for_partial_shade
+
+- story: cover_crop_options
+  steps:
+  - intent: cover_crop_options
+  - action: utter_cover_crop_options
+
+- story: potato_planting_depth
+  steps:
+  - intent: potato_planting_depth
+  - action: utter_potato_planting_depth
+
+- story: watering_frequency_potatoes
+  steps:
+  - intent: watering_frequency_potatoes
+  - action: utter_watering_frequency_potatoes
+
+- story: potato_spacing
+  steps:
+  - intent: potato_spacing
+  - action: utter_potato_spacing
+
+- story: tomato_leaf_issue
+  steps:
+  - intent: tomato_leaf_issue
+  - action: utter_tomato_leaf_issue
+
+- story: apple_tree_issue
+  steps:
+  - intent: apple_tree_issue
+  - action: utter_apple_tree_issue
+
+- story: wheat_disease
+  steps:
+  - intent: wheat_disease
+  - action: utter_wheat_disease
+
+- story: cucumber_pest
+  steps:
+  - intent: cucumber_pest
+  - action: utter_cucumber_pest
+
+- story: grapevine_disease
+  steps:
+  - intent: grapevine_disease
+  - action: utter_grapevine_disease
+
+- story: pepper_fruit_issue
+  steps:
+  - intent: pepper_fruit_issue
+  - action: utter_pepper_fruit_issue
+
+- story: Identify disease and recommend fungicide
+  steps:
+  - intent: identify_disease
+  - action: utter_identify_disease
+  - intent: recommend_fungicide
+  - action: utter_recommend_fungicide
+
+- story: Ask about suitable crops for different soil types
+  steps:
+  - intent: suitable_crops_sandy_soil
+  - action: utter_suitable_crops_sandy_soil
+  - intent: suitable_crops_clayey_soil
+  - action: utter_suitable_crops_clayey_soil
+  - intent: suitable_crops_loamy_soil
+  - action: utter_suitable_crops_loamy_soil
+  - intent: crops_thriving_saline_soil
+  - action: utter_crops_thriving_saline_soil
+  - intent: suitable_crops_sandy_loam_soil
+  - action: utter_suitable_crops_sandy_loam_soil
+  - intent: crops_tolerate_alkaline_soil
+  - action: utter_crops_tolerate_alkaline_soil
+  - intent: crops_thriving_waterlogged_soil
+  - action: utter_crops_thriving_waterlogged_soil
+  - intent: crops_well_drained_sandy_soil
+  - action: utter_crops_well_drained_sandy_soil
+  - intent: crops_suitable_rocky_soil
+  - action: utter_crops_suitable_rocky_soil
+
+- story: Ask about nitrogen-fixing crops and nitrogen-demanding crops
+  steps:
+  - intent: nitrogen_fixing_crops
+  - action: utter_nitrogen_fixing_crops
+  - intent: nitrogen_demanding_crops
+  - action: utter_nitrogen_demanding_crops
+
+- story: Ask about crops for specific conditions and farming practices
+  steps:
+  - intent: crops_raised_beds_containers
+  - action: utter_crops_raised_beds_containers
+  - intent: crops_suitable_high_salinity
+  - action: utter_crops_suitable_high_salinity
+  - intent: crops_prevent_soil_erosion
+  - action: utter_crops_prevent_soil_erosion
+  - intent: crops_ideal_organic_farming
+  - action: utter_crops_ideal_organic_farming
+
+- story: Ask about pest infestation and pesticide control
+  steps:
+  - intent: signs_pest_infestation
+  - action: utter_signs_pest_infestation
+  - intent: effective_pesticides_aphids
+  - action: utter_effective_pesticides_aphids
+  - intent: prevent_pesticide_resistance
+  - action: utter_prevent_pesticide_resistance
+
+- story: Role of fungicides
+  steps:
+  - intent: role_of_fungicides
+  - action: utter_role_of_fungicides
+
+- story: Identifying fungal diseases
+  steps:
+  - intent: identify_fungal_diseases
+  - action: utter_identify_fungal_diseases
+
+- story: Using biopesticides for pest control
+  steps:
+  - intent: biopesticides_for_pest_control
+  - action: utter_biopesticides_for_pest_control
+
+- story: Importance of scouting for pests
+  steps:
+  - intent: importance_of_scouting_for_pests
+  - action: utter_importance_of_scouting_for_pests
+
+- story: Non-chemical methods for pest control
+  steps:
+  - intent: non_chemical_methods_for_pest_control
+  - action: utter_non_chemical_methods_for_pest_control
+
+- story: Managing diseases without excessive reliance on pesticides
+  steps:
+  - intent: manage_diseases_without_excessive_reliance_on_pesticides
+  - action: utter_manage_diseases_without_excessive_reliance_on_pesticides
+
+- story: Using pesticides for powdery mildew control
+  steps:
+  - intent: pesticide_for_powdery_mildew
+  - action: utter_pesticide_for_powdery_mildew
+
+- story: Using pesticides for bacterial spot control in tomatoes
+  steps:
+  - intent: pesticide_for_bacterial_spot_in_tomatoes
+  - action: utter_pesticide_for_bacterial_spot_in_tomatoes
+
+- story: Using pesticides for downy mildew control in cucurbits
+  steps:
+  - intent: pesticide_for_downy_mildew_in_cucurbits
+  - action: utter_pesticide_for_downy_mildew_in_cucurbits
+
+- story: Controlling aphids in crops
+  steps:
+  - intent: control_aphids_in_crops
+  - action: utter_control_aphids_in_crops
+
+- story: Using pesticides for corn borer control in maize fields
+  steps:
+  - intent: pesticide_for_corn_borer_in_maize_fields
+  - action: utter_pesticide_for_corn_borer_in_maize_fields
+
+- story: Using pesticides for early blight control in potato crops
+  steps:
+  - intent: pesticide_for_early_blight_in_potato_crops
+  - action: utter_pesticide_for_early_blight_in_potato_crops
+
+- story: Using pesticides for whitefly control in greenhouse crops
+  steps:
+  - intent: pesticide_for_whiteflies_in_greenhouse_crops
+  - action: utter_pesticide_for_whiteflies_in_greenhouse_crops
+
+- story: Managing rust diseases in wheat crops
+  steps:
+  - intent: manage_rust_diseases_in_wheat_crops
+  - action: utter_manage_rust_diseases_in_wheat_crops
+
+- story: Suitable crops for loamy soil
+  steps:
+  - intent: suitable_crops_for_loamy_soil
+  - action: utter_suitable_crops_for_loamy_soil
+
+- story: Crops resistant to waterlogging
+  steps:
+  - intent: crops_resistant_to_waterlogging
+  - action: utter_crops_resistant_to_waterlogging
+
+- story: Cover crops to improve soil fertility in clayey soil
+  steps:
+  - intent: cover_crops_to_improve_soil_fertility_in_clayey_soil
+  - action: utter_cover_crops_to_improve_soil_fertility_in_clayey_soil
+
+- story: Salt-tolerant crops for saline regions
+  steps:
+  - intent: salt_tolerant_crops_for_saline_regions
+  - action: utter_salt_tolerant_crops_for_saline_regions
+
+- story: Crop varieties for acidic soil
+  steps:
+  - intent: crop_varieties_for_acidic_soil
+  - action: utter_crop_varieties_for_acidic_soil
+
+- story: Winter cover crops for enhancing soil structure
+  steps:
+  - intent: winter_cover_crops_for_enhancing_soil_structure
+  - action: utter_winter_cover_crops_for_enhancing_soil_structure
+
+- story: Optimal growing conditions for tomato plants
+  steps:
+  - intent: optimal_growing_conditions_for_tomato_plants
+  - action: utter_optimal_growing_conditions_for_tomato_plants
+
+- story: Preventing common diseases in tomato plants
+  steps:
+  - intent: prevent_common_diseases_in_tomato_plants
+  - action: utter_prevent_common_diseases_in_tomato_plants
+
+- story: Ideal soil conditions for growing wheat
+  steps:
+  - intent: ideal_soil_conditions_for_growing_wheat
+  - action: utter_ideal_soil_conditions_for_growing_wheat
+
+- story: Protecting barley crops from rust diseases
+  steps:
+  - intent: protect_barley_crop_from_rust_diseases
+  - action: utter_protect_barley_crop_from_rust_diseases
+
+- story: Minimize weed competition in grain fields
+  steps:
+  - intent: minimize_weed_competition
+  - action: utter_minimize_weed_competition
+
+- story: Safety measures for using agricultural chemicals and equipment
+  steps:
+  - intent: safety_measures_agricultural_chemicals_equipment
+  - action: utter_safety_measures_agricultural_chemicals_equipment
+
+- story: Enhance pollination in crops
+  steps:
+  - intent: enhance_pollination
+  - action: utter_enhance_pollination
+
+- story: Selecting resistant crop varieties
+  steps:
+  - intent: resistant_crop_varieties
+  - action: utter_resistant_crop_varieties
+
+- story: Signs of nutrient deficiencies in plants
+  steps:
+  - intent: signs_nutrient_deficiencies
+  - action: utter_signs_nutrient_deficiencies
+
+- story: Manage weeds without heavy reliance on herbicides
+  steps:
+  - intent: manage_weeds_without_herbicides
+  - action: utter_manage_weeds_without_herbicides
+
+- story: Effective organic fertilizers for crops
+  steps:
+  - intent: organic_fertilizers_effective
+  - action: utter_organic_fertilizers_effective
+
+- story: Pest control in organic farming without synthetic pesticides
+  steps:
+  - intent: control_pests_organic_farming
+  - action: utter_control_pests_organic_farming
+
+- story: Use of treated seeds in organic farming
+  steps:
+  - intent: treated_seeds_organic_farming
+  - action: utter_treated_seeds_organic_farming
+
+- story: Manage soil fertility in organic farming without synthetic inputs
+  steps:
+  - intent: manage_soil_fertility_organic_farming
+  - action: utter_manage_soil_fertility_organic_farming
+
+- story: Suitable crops for organic farming
+  steps:
+  - intent: crops_suited_organic_farming
+  - action: utter_crops_suited_organic_farming
+
+- story: Enhance biodiversity on an organic farm
+  steps:
+  - intent: enhance_biodiversity_organic_farm
+  - action: utter_enhance_biodiversity_organic_farm
+
+
+
+- story: High-yield vegetable crops for loamy soil
+  steps:
+  - intent: high_yield_vegetable_crops_loamy_soil
+  - action: utter_high_yield_vegetable_crops_loamy_soil
+
+- story: Fruit trees for good yield and quality with optimal soil conditions
+  steps:
+  - intent: fruit_trees_good_yield_quality_optimal_soil
+  - action: utter_fruit_trees_good_yield_quality_optimal_soil
+
+- story: Crops suited for cultivation in consistently moist soil
+  steps:
+  - intent: crops_cultivation_moist_soil
+  - action: utter_crops_cultivation_moist_soil
+
+- story: Planting cover crops in moist soil to prevent erosion
+  steps:
+  - intent: cover_crops_moist_soil_prevent_erosion
+  - action: utter_cover_crops_moist_soil_prevent_erosion
+
+- story: Prevent fungal diseases in crops in high humidity and moisture regions
+  steps:
+  - intent: prevent_fungal_diseases_high_humidity_moisture
+  - action: utter_prevent_fungal_diseases_high_humidity_moisture
+
+- story: Optimize irrigation practices in consistently moist soil
+  steps:
+  - intent: optimize_irrigation_consistently_moist_soil
+  - action: utter_optimize_irrigation_consistently_moist_soil
+
+- story: Planting vegetables in consistently moist soil for optimal growth and yield
+  steps:
+  - intent: planting_vegetables_consistently_moist_soil
+  - action: utter_planting_vegetables_consistently_moist_soil
+
+- story: Fruit trees thriving in consistently moist soil
+  steps:
+  - intent: fruit_trees_consistently_moist_soil
+  - action: utter_fruit_trees_consistently_moist_soil
+
+- story: Weed management in consistently moist soil
+  steps:
+  - intent: manage_weeds_consistently_moist_soil
+  - action: utter_manage_weeds_consistently_moist_soil
+
+- story: Adapting planting and irrigation schedules to fluctuating moisture levels
+  steps:
+  - intent: adapt_planting_irrigation_schedules_fluctuating_moisture
+  - action: utter_adapt_planting_irrigation_schedules_fluctuating_moisture
+
+- story: Planting cover crops in dry soil to prevent erosion
+  steps:
+  - intent: cover_crops_dry_soil_prevent_erosion
+  - action: utter_cover_crops_dry_soil_prevent_erosion
+
+- story: Planning crop rotations to minimize drought impact
+  steps:
+  - intent: plan_crop_rotations_minimize_drought_impact
+  - action: utter_plan_crop_rotations_minimize_drought_impact

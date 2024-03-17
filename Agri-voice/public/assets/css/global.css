@@ -1,0 +1,38 @@
+  @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Teko&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --theme-color-dark-green:#435334;
+    --theme-color-green:#9EB384;
+    --theme-color-light-green:#CEDEBD;
+    --theme-color-4:#FAF1E4;
+    --sub-heading-font: 'Source Code Pro', monospace;
+    --main-heading-font: 'Teko', sans-serif;
+}
+
+.main-heading{
+    font-family: var(--main-heading-font);
+    font-size: 4rem;
+    letter-spacing: 4px;
+    color: var(--theme-color-dark-green);
+    text-transform: uppercase;
+}
+
+.sub-heading{
+    font-family: var(--sub-heading-font);
+    color: var(--theme-color-dark-green);
+    margin: 0;
+}
+.center-item-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+}

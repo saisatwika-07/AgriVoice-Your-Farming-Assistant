@@ -1,0 +1,21 @@
+#Agri voice web
+
+agri-voice/node_modules
+agri-voice/keys
+
+agri-voice/package-lock.json
+agri-voice/yarn.lock
+
+
+# Rasa Chatbot
+
+Rasa-chatbot/agri-voice
+
+# Ignore any secrets or sensitive information
+credentials.yml
+
+
+# Ignore any local configuration files
+config.yml
+
+

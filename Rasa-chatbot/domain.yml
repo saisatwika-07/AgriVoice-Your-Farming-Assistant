@@ -1,0 +1,373 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - weather
+  - ask_crop_recommendation
+  - prevent_pests
+  - ideal_strawberry_pH
+  - water_amount_tomato_plants
+  - common_potato_diseases
+  - harvest_time_wheat
+  - improve_soil_fertility
+  - sustainable_farming_practices
+  - drip_irrigation_benefits
+  - identify_nutrient_deficiencies
+  - crops_for_sandy_soil
+  - crops_for_clayey_soil
+  - crops_for_acidic_soil
+  - crops_for_alkaline_soil
+  - crops_for_hot_dry_climate
+  - crops_for_cool_moist_climate
+  - space_saving_crops
+  - pollinator_attracting_crops
+  - crops_for_partial_shade
+  - cover_crop_options
+  - potato_planting_depth
+  - watering_frequency_potatoes
+  - potato_spacing
+  - tomato_leaf_issue
+  - apple_tree_issue
+  - wheat_disease
+  - cucumber_pest
+  - grapevine_disease
+  - pepper_fruit_issue
+  - identify_disease
+  - recommend_fungicide
+  - suitable_crops_sandy_soil
+  - suitable_crops_clayey_soil
+  - suitable_crops_loamy_soil
+  - nitrogen_fixing_crops
+  - crops_thriving_saline_soil
+  - suitable_crops_sandy_loam_soil
+  - crops_tolerate_alkaline_soil
+  - crops_thriving_waterlogged_soil
+  - crops_well_drained_sandy_soil
+  - crops_improving_soil_structure
+  - crops_suitable_rocky_soil
+  - nitrogen_demanding_crops
+  - crops_raised_beds_containers
+  - crops_suitable_high_salinity
+  - crops_prevent_soil_erosion
+  - crops_ideal_organic_farming
+  - signs_pest_infestation
+  - effective_pesticides_aphids
+  - prevent_pesticide_resistance
+  - role_of_fungicides
+  - identify_fungal_diseases
+  - biopesticides_for_pest_control
+  - importance_of_scouting_for_pests
+  - reduce_environmental_impact_of_pesticide_use
+  - non_chemical_methods_for_pest_control
+  - manage_diseases_without_excessive_reliance_on_pesticides
+  - pesticide_for_powdery_mildew
+  - pesticide_for_bacterial_spot_in_tomatoes
+  - pesticide_for_downy_mildew_in_cucurbits
+  - control_aphids_in_crops
+  - pesticide_for_corn_borer_in_maize_fields
+  - pesticide_for_early_blight_in_potato_crops
+  - pesticide_for_whiteflies_in_greenhouse_crops
+  - manage_rust_diseases_in_wheat_crops
+  - suitable_crops_for_loamy_soil
+  - crops_resistant_to_waterlogging
+  - cover_crops_to_improve_soil_fertility_in_clayey_soil
+  - salt_tolerant_crops_for_saline_regions
+  - crop_varieties_for_acidic_soil
+  - winter_cover_crops_for_enhancing_soil_structure
+  - optimal_growing_conditions_for_tomato_plants
+  - prevent_common_diseases_in_tomato_plants
+  - ideal_soil_conditions_for_growing_wheat
+  - protect_barley_crop_from_rust_diseases
+  #####
+  - minimize_weed_competition
+  - safety_measures_agricultural_chemicals_equipment
+  - enhance_pollination
+  - resistant_crop_varieties
+  - signs_nutrient_deficiencies
+  - manage_weeds_without_herbicides
+  - organic_fertilizers_effective
+  - control_pests_organic_farming
+  - treated_seeds_organic_farming
+  - manage_soil_fertility_organic_farming
+  - crops_suited_organic_farming
+  - enhance_biodiversity_organic_farm
+  - high_yield_vegetable_crops_loamy_soil
+  - fruit_trees_good_yield_quality_optimal_soil
+  - crops_cultivation_moist_soil
+  - cover_crops_moist_soil_prevent_erosion
+  - prevent_fungal_diseases_high_humidity_moisture
+  - optimize_irrigation_consistently_moist_soil
+  - planting_vegetables_consistently_moist_soil
+  - fruit_trees_consistently_moist_soil
+  - manage_weeds_consistently_moist_soil
+  - adapt_planting_irrigation_schedules_fluctuating_moisture
+  - cover_crops_dry_soil_prevent_erosion
+  - plan_crop_rotations_minimize_drought_impact
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_weather:
+  - text: "Weather is pillow today!"
+
+  utter_crop_recommendation:
+    - text: "Tomatoes, peppers, cucumbers, and more are suitable for planting in the summer season. Ensure proper sunlight, water, and soil conditions for successful cultivation during the summer season."
+
+  utter_pest_prevention_tips:
+    - text: "To prevent pests, you can use natural predators, organic pesticides, or crop rotation techniques. Additionally, maintaining proper hygiene in your fields can also help reduce pest infestations."
+
+  utter_strawberry_pH:
+    - text: "The ideal pH level for growing strawberries is between 5.5 and 6.5. You can test the pH level of your soil using a soil testing kit and adjust it accordingly with lime or sulfur."
+
+  utter_water_amount_tomato_plants:
+    - text: "Tomato plants typically require about 1 to 2 inches of water per week, depending on the weather and soil conditions. It's important to water them evenly and avoid overwatering, which can lead to diseases like root rot."
+
+  utter_common_potato_diseases:
+    - text: "Common diseases that affect potato plants include late blight, early blight, and potato scab. To prevent these diseases, practice crop rotation, use certified disease-free seed potatoes, and maintain good soil drainage."
+
+  utter_harvest_time_wheat:
+    - text: "Wheat is typically ready for harvest when the kernels are hard and the plant has turned golden brown. You can also test the moisture content of the grains to determine if they are ready for harvest."
+
+  utter_improve_soil_fertility:
+    - text: "To improve soil fertility, you can add organic matter such as compost or manure, use cover crops, and rotate crops. These practices help replenish nutrients in the soil and improve its structure."
+
+  utter_sustainable_farming_practices:
+    - text: "Sustainable farming practices include crop rotation, conservation tillage, integrated pest management (IPM), and water conservation techniques like drip irrigation. These practices help minimize environmental impact and maintain soil health."
+
+  utter_drip_irrigation_benefits:
+    - text: "Drip irrigation delivers water directly to the roots of plants, minimizing water waste and reducing the risk of diseases caused by overwatering. It also promotes better nutrient uptake and can lead to higher crop yields."
+
+  utter_identify_nutrient_deficiencies:
+    - text: "Nutrient deficiencies in plants can manifest as yellowing or browning of leaves, stunted growth, or abnormal leaf discoloration. You can conduct a soil test or visually inspect the plants to identify specific deficiencies and take appropriate measures such as fertilization or soil amendment."
+
+  utter_cucumber_pest:
+    - text: "Cucumbers are susceptible to various pests such as aphids, cucumber beetles, and spider mites. To control these pests, you can use insecticidal soap, neem oil, or introduce natural predators like ladybugs and lacewings into your garden."
+
+  utter_crops_for_sandy_soil:
+    - text: "Crops that thrive in sandy soil include root vegetables like carrots, radishes, and potatoes, as well as drought-tolerant crops like sunflowers, beans, and certain varieties of corn."
+
+  utter_crops_for_clayey_soil:
+    - text: "Crops that tolerate clayey soil include leafy greens like kale and collard greens, as well as deep-rooted crops like tomatoes, peppers, and winter squash."
+
+  utter_crops_for_acidic_soil:
+    - text: "Acid-loving crops that thrive in acidic soil conditions include blueberries, raspberries, strawberries, rhubarb, and potatoes. You can also amend the soil with lime to raise the pH if necessary."
+
+  utter_crops_for_alkaline_soil:
+    - text: "Crops that tolerate alkaline soil conditions include beans, peas, beets, and spinach. You can also amend the soil with sulfur to lower the pH if needed."
+
+  utter_crops_for_hot_dry_climate:
+    - text: "Crops that thrive in hot and dry climates include drought-tolerant varieties of tomatoes, peppers, eggplants, okra, and melons. Succulent plants like cacti and certain herbs like rosemary and thyme also do well in such conditions."
+
+  utter_crops_for_cool_moist_climate:
+    - text: "Crops that thrive in cool and moist weather conditions include leafy greens like lettuce, spinach, and kale, as well as root vegetables like carrots, beets, and turnips. Brassicas such as broccoli, cauliflower, and cabbage also perform well in cooler climates."
+
+  utter_space_saving_crops:
+    - text: "Space-saving crops that are suitable for small gardens include bush varieties of beans, compact varieties of tomatoes and peppers, salad greens, herbs, and dwarf fruit trees like dwarf citrus or patio fruit varieties."
+
+  utter_pollinator_attracting_crops:
+    - text: "Crops that attract pollinators include flowering herbs like lavender, basil, and thyme, as well as flowers like sunflowers, zinnias, and cosmos. Vegetables like cucumbers, squash, and melons also produce attractive flowers that attract bees and other pollinators."
+
+  utter_crops_for_partial_shade:
+    - text: "Crops that tolerate partial shade include leafy greens like lettuce, spinach, and Swiss chard, as well as herbs like mint, cilantro, and parsley. Some root vegetables like radishes and beets can also be grown in partial shade."
+
+  utter_cover_crop_options:
+    - text: "Good cover crop options for improving soil health include legumes like clover, vetch, and peas, as well as grasses like ryegrass and oats. Mixtures of cover crops can provide a range of benefits including nitrogen fixation, weed suppression, and soil erosion control."
+
+  utter_potato_planting_depth:
+    - text: "Potatoes should be planted at a depth of 3 to 4 inches in loose, well-drained soil to promote proper root development and prevent rotting."
+
+  utter_watering_frequency_potatoes:
+    - text: "Potato plants should be watered consistently to keep the soil evenly moist, especially during the growing season. Maintain the water level at a height of about 6 inches above the soil surface to ensure adequate hydration without waterlogging."
+
+  utter_potato_spacing:
+    - text: "Potato plants should be spaced approximately 12 to 15 inches apart in rows, with rows spaced about 2 to 3 feet apart. Proper spacing allows for adequate airflow and prevents overcrowding, which can lead to disease and reduced yield."
+
+  utter_tomato_leaf_issue:
+    - text: "Curled and distorted leaves on tomato plants may indicate a viral infection, such as tomato mosaic virus or curly top virus. Unfortunately, there are no chemical treatments for viral diseases. I recommend removing and destroying infected plants to prevent the spread of the virus to healthy plants."
+
+  utter_apple_tree_issue:
+    - text: "The small holes and brown spots on the apple tree leaves are likely caused by apple sawfly larvae or apple scab disease. For apple scab, I recommend using a fungicide containing captan or mancozeb. For apple sawfly, you can use an insecticide containing spinosad or neem oil. Apply the appropriate treatment according to the label instructions."
+
+  utter_wheat_disease:
+    - text: "The orange pustules on wheat leaves are characteristic of wheat rust, a fungal disease. I suggest using a fungicide containing triazole or strobilurin active ingredients to manage wheat rust. Apply the fungicide when the disease first appears and repeat as necessary following the label instructions."
+
+  utter_grapevine_disease:
+    - text: "The brown lesions and wilting of grapevine leaves are symptoms of grapevine downy mildew, a fungal disease. I recommend using a fungicide containing copper sulfate or fosetyl-aluminum to manage downy mildew. Apply the fungicide preventatively before the disease appears, following the label instructions for best results."
+
+  utter_pepper_fruit_issue:
+    - text: "The dark, sunken spots on pepper fruit are symptoms of blossom end rot, a physiological disorder caused by calcium deficiency or irregular watering. While there are no fungicides to treat blossom end rot directly, you can prevent it by ensuring consistent watering and adequate calcium levels in the soil. Consider adding calcium amendments or using mulch to maintain soil moisture."
+
+  utter_identify_disease:
+    - text: "The fuzzy, grayish mold covering cabbage plants is likely gray mold, caused by the fungus Botrytis cinerea."
+  utter_recommend_fungicide:
+    - text: "I recommend using a fungicide containing boscalid or pyraclostrobin to control gray mold. Apply the fungicide when the disease first appears and repeat as necessary following the label instructions."
+  utter_suitable_crops_sandy_soil:
+    - text: "Opt for crops like carrots or radishes that thrive in well-draining sandy soil."
+  utter_suitable_crops_clayey_soil:
+    - text: "Consider crops like soybeans or certain types of wheat that can handle clayey soil."
+  utter_suitable_crops_loamy_soil:
+    - text: "Opt for versatile crops like corn or beans that generally perform well in loamy soil."
+  utter_nitrogen_fixing_crops:
+    - text: "Consider planting legumes like peas or clover to enhance nitrogen levels in the soil."
+  utter_crops_thriving_saline_soil:
+    - text: "Explore salt-tolerant crops like barley or certain types of millet."
+  utter_suitable_crops_sandy_loam_soil:
+    - text: "Opt for crops like tomatoes or peppers that generally do well in well-drained sandy loam."
+  utter_crops_tolerate_alkaline_soil:
+    - text: "Consider crops like beets or spinach that can handle higher pH levels in alkaline soil."
+  utter_crops_thriving_waterlogged_soil:
+    - text: "Consider crops like rice or cranberries that can thrive in waterlogged conditions."
+  utter_crops_well_drained_sandy_soil:
+    - text: "Opt for crops like carrots or sweet potatoes that perform well in sandy soils with limited organic content."
+  utter_crops_improving_soil_structure:
+    - text: "Consider cover crops like radishes or legumes such as clover, which can help break up compacted soil and enhance its structure."
+  utter_crops_suitable_rocky_soil:
+    - text: "Opt for crops like grapes or certain fruit trees, which can adapt to rocky soils."
+  utter_nitrogen_demanding_crops:
+    - text: "Consider planting crops like corn or cabbage that benefit from nitrogen-rich, fertile soil."
+  utter_crops_raised_beds_containers:
+    - text: "Opt for compact crops like herbs, cherry tomatoes, or lettuce that are well-suited for raised beds or container gardening."
+  utter_crops_suitable_high_salinity:
+    - text: "Explore salt-tolerant crops like quinoa or certain varieties of barley."
+  utter_crops_prevent_soil_erosion:
+    - text: "Consider planting cover crops like clover or grasses to help prevent soil erosion."
+  utter_crops_ideal_organic_farming:
+    - text: "Opt for organic-friendly crops like tomatoes, peppers, or strawberries that thrive in nutrient-rich soil without synthetic fertilizers."
+  utter_signs_pest_infestation:
+    - text: "Look for wilting, discoloration, holes in leaves, or the presence of pests on plants."
+  utter_effective_pesticides_aphids:
+    - text: "Neonicotinoids and pyrethroids are commonly used for controlling aphids in vegetable crops."
+  utter_prevent_pesticide_resistance:
+    - text: "Rotate pesticides with different modes of action, use integrated pest management (IPM) practices, and avoid over-reliance on a single type of pesticide."
+
+  utter_role_of_fungicides:
+    - text: "Fungicides help control and prevent the spread of fungal diseases in crops, protecting plant health."
+  utter_identify_fungal_diseases:
+    - text: "Look for symptoms such as powdery mildew, leaf spots, or abnormal growth patterns that may indicate a fungal infection."
+  utter_biopesticides_for_pest_control:
+    - text: "Yes, biopesticides, derived from natural materials like bacteria or fungi, are used for environmentally friendly pest management."
+  utter_importance_of_scouting_for_pests:
+    - text: "Early detection allows farmers to implement timely pest control measures, preventing potential crop damage."
+  utter_non_chemical_methods_for_pest_control:
+    - text: "Practices such as companion planting, releasing beneficial insects, and using neem oil are common in organic pest control."
+  utter_manage_diseases_without_excessive_reliance_on_pesticides:
+    - text: "Implementing crop rotation, using disease-resistant crop varieties, and maintaining good agricultural practices help manage diseases without heavy pesticide use."
+  utter_pesticide_for_powdery_mildew:
+    - text: "Fungicides containing active ingredients such as sulfur, potassium bicarbonate, or neem oil are effective against powdery mildew."
+  utter_pesticide_for_bacterial_spot_in_tomatoes:
+    - text: "Copper-based fungicides are commonly used to control bacterial spot in tomatoes."
+  utter_pesticide_for_downy_mildew_in_cucurbits:
+    - text: "Fungicides containing active ingredients like chlorothalonil or metalaxyl are effective against downy mildew in cucurbits."
+  utter_control_aphids_in_crops:
+    - text: "Insecticides such as neonicotinoids (imidacloprid), pyrethroids (bifenthrin), or insecticidal soaps are effective against aphids."
+  utter_pesticide_for_corn_borer_in_maize_fields:
+    - text: "Insecticides containing Bacillus thuringiensis (Bt) or chemical insecticides like cyfluthrin are effective against corn borer in maize."
+  utter_pesticide_for_early_blight_in_potato_crops:
+    - text: "Fungicides with active ingredients like chlorothalonil or mancozeb are commonly used to control early blight in potatoes."
+  utter_pesticide_for_whiteflies_in_greenhouse_crops:
+    - text: "Insecticides containing neonicotinoids (such as imidacloprid) or insect growth regulators are effective against whiteflies in greenhouse crops."
+  utter_manage_rust_diseases_in_wheat_crops:
+    - text: "Fungicides containing triazoles or strobilurins are commonly used to control rust diseases in wheat."
+  utter_suitable_crops_for_loamy_soil:
+    - text: "Crops like tomatoes or peppers thrive in well-drained loamy soil."
+  utter_crops_resistant_to_waterlogging:
+    - text: "Opt for water-tolerant crops like rice or certain varieties of watermelon."
+  utter_cover_crops_to_improve_soil_fertility_in_clayey_soil:
+    - text: "Consider cover crops such as clover or vetch to enhance soil structure and nutrient content."
+  utter_salt_tolerant_crops_for_saline_regions:
+    - text: "Explore salt-tolerant crops such as quinoa or certain varieties of barley."
+  utter_crop_varieties_for_acidic_soil:
+    - text: "Consider acid-tolerant crops like blueberries or specific varieties of acid-loving crops."
+  utter_winter_cover_crops_for_enhancing_soil_structure:
+    - text: "Given the soil texture and upcoming cool temperatures, winter cover crops like rye or hairy vetch can enhance soil structure."
+  utter_optimal_growing_conditions_for_tomato_plants:
+    - text: "Tomatoes thrive in well-drained soil with full sunlight. Ensure proper spacing and support for healthy growth."
+  utter_prevent_common_diseases_in_tomato_plants:
+    - text: "Practice crop rotation, use disease-resistant varieties, and apply fungicides preventatively to prevent diseases like blight in tomato plants."
+  utter_ideal_soil_conditions_for_growing_wheat:
+    - text: "Wheat prefers well-drained loamy soil with a neutral to slightly acidic pH."
+  utter_protect_barley_crop_from_rust_diseases:
+    - text: "Choose resistant varieties, practice crop rotation, and apply fungicides as a preventive measure to protect barley crops from rust diseases."
+  ################
+  utter_minimize_weed_competition:
+    - text: "To minimize weed competition in grain fields, you can implement effective weed control measures, including pre-emergence herbicides, mulching, and proper crop rotation."
+  utter_safety_measures_agricultural_chemicals_equipment:
+    - text: "When using agricultural chemicals and equipment, it's essential to adhere to recommended safety guidelines, use personal protective equipment (PPE), and follow proper handling procedures."
+  utter_enhance_pollination:
+    - text: "To enhance pollination in crops, particularly if there is a shortage of natural pollinators, consider introducing beehives, planting pollinator-friendly flowers, or using pollination-boosting techniques."
+  utter_resistant_crop_varieties:
+    - text: "Choose disease-resistant crop varieties and practice integrated pest management to minimize the impact of pests."
+  utter_signs_nutrient_deficiencies:
+    - text: "Signs of nutrient deficiencies in plants include symptoms like yellowing leaves. Address specific nutrient deficiencies based on soil tests using appropriate fertilizers."
+  utter_manage_weeds_without_herbicides:
+    - text: "To manage weeds without relying heavily on herbicides, employ practices like mulching, cultivation, and cover cropping to control weed growth."
+  utter_organic_fertilizers_effective:
+    - text: "Explore options like compost, manure, and green manure as effective organic fertilizers for crops. Monitor nutrient levels through soil testing to ensure crops receive sufficient nutrients."
+  utter_control_pests_organic_farming:
+    - text: "In organic farming, implement integrated pest management (IPM) strategies, such as releasing beneficial insects, using companion planting, and maintaining biodiversity, to control pests without synthetic pesticides."
+  utter_treated_seeds_organic_farming:
+    - text: "Generally, treated seeds are not allowed in organic farming. Consider using untreated seeds and organic seed treatments as alternatives."
+  utter_manage_soil_fertility_organic_farming:
+    - text: "Manage soil fertility in organic farming by focusing on crop rotation, cover cropping, and incorporating organic matter to enhance soil fertility naturally."
+  utter_crops_suited_organic_farming:
+    - text: "Many crops can be grown organically. Choose disease-resistant varieties and crops suited to your region for organic farming practices."
+  utter_enhance_biodiversity_organic_farm:
+    - text: "Enhance biodiversity on your organic farm by incorporating hedgerows, planting diverse crops, and creating habitats for beneficial insects to promote biodiversity."
+  utter_high_yield_vegetable_crops_loamy_soil:
+    - text: "Vegetables like tomatoes, peppers, and cucumbers thrive in loamy soil and moderate temperatures, offering good market demand."
+  utter_fruit_trees_good_yield_quality_optimal_soil:
+    - text: "Fruit trees such as apple, pear, and cherry can be planted for their high-quality produce, provided the soil nutrients are sufficient and rainfall is anticipated."
+  utter_crops_cultivation_moist_soil:
+    - text: "Crops such as rice, taro, and watercress thrive in consistently moist soil conditions."
+  utter_cover_crops_moist_soil_prevent_erosion:
+    - text: "Cover crops like clover, buckwheat, and vetch can be beneficial for preventing erosion and improving soil health in moist conditions."
+  utter_prevent_fungal_diseases_high_humidity_moisture:
+    - text: "Adequate spacing, proper ventilation, and the application of fungicides can help prevent fungal diseases in crops in humid conditions."
+  utter_optimize_irrigation_consistently_moist_soil:
+    - text: "Using moisture sensors, drip irrigation, and adjusting watering schedules based on weather conditions can help avoid overwatering in consistently moist soil."
+  utter_planting_vegetables_consistently_moist_soil:
+    - text: "Selecting water-loving vegetables like lettuce, celery, and watermelon, and providing well-drained planting beds can optimize growth in moist soil."
+  utter_fruit_trees_consistently_moist_soil:
+    - text: "Trees like willow, bald cypress, and river birch thrive in moist conditions; providing adequate spacing and mulching can promote their health."
+  utter_manage_weeds_consistently_moist_soil:
+    - text: "Mulching, regular weeding, and cover cropping can help control weed growth while maintaining soil moisture in consistently moist soil."
+  utter_adapt_planting_irrigation_schedules_fluctuating_moisture:
+    - text: "Monitoring weather patterns, using soil moisture sensors, and adjusting planting and irrigation schedules accordingly can help adapt to fluctuating moisture levels."
+  utter_cover_crops_dry_soil_prevent_erosion:
+    - text: "Cover crops like clover, cowpeas, and winter wheat can help prevent soil erosion and improve soil structure in dry conditions."
+  utter_plan_crop_rotations_minimize_drought_impact:
+    - text: "Diversifying crops, implementing water-conserving practices, and selecting crops with varying water"
+
+
+actions:
+  - action_default_fallback
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

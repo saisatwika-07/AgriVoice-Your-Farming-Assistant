@@ -1,0 +1,18 @@
+RewriteEngine on
+
+#Rewrite Condition for Directory
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#Rewrite Condition for File
+RewriteCond %{REQUEST_FILENAME} !-f
+
+#Rewrite Rule
+RewriteRule ^([^\.]+)$ $1.html [NC,L] 
+
+Options -Indexes
+
+# This rule alow user to access file
+RewriteCond %{REQUEST_FILENAME} !-f
+#=============================================================================================================
+#
+# ErrorDocument 404 https://linkto error page...
