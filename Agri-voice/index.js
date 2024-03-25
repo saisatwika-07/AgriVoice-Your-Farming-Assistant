@@ -7,11 +7,14 @@ import axios  from "axios";
 
 import userDetails from "./mongodb.js";
 import farmerNews from "./web-scraping-news.js";
+import farmerNewsEt from "./web-scraping-et.js";
 import translateText from "./translate.cjs";
+import { log } from "console";
 
 const app = express();
 const port = process.env.PORT || 3000;
 const rasaUrl = "http://localhost:5005";
+
 
 app.use(express.static('public'));
 
@@ -75,7 +78,7 @@ var combinedData = [];
 
 app.get("/home", isAuthenticated, (req, res) => {
     var rasaIsEmpty = rasaResponses.length === 0;
-    res.render("home", {combinedData, rasaIsEmpty, farmerNews})
+    res.render("home", {combinedData, rasaIsEmpty, farmerNews, farmerNewsEt})
 });
 
 

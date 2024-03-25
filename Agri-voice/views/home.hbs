@@ -65,6 +65,15 @@
                                 <p class="date">{{this.date}}</p>
                             </div>
                         </a>
+                    {{/each}}  
+
+                    {{#each farmerNewsEt}}
+                        <a href="{{this.url}}" target="_blank">
+                            <div class="news-item">
+                                <p><i class="fa-solid fa-hand-point-right"></i> {{this.title}}</p>
+                                <p class="date">{{this.date}}</p>
+                            </div>
+                        </a>
                     {{/each}}                    
                 </div>
             </div>
