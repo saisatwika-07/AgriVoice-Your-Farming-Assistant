@@ -479,3 +479,477 @@ stories:
   steps:
   - intent: plan_crop_rotations_minimize_drought_impact
   - action: utter_plan_crop_rotations_minimize_drought_impact
+
+
+  ###########################################################
+  ###########################################################
+
+- story: plan crop rotation path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: plan_crop_rotation
+  - action: utter_plan_crop_rotation
+
+- story: water requirement tomato plants path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: water_requirement_tomato_plants
+  - action: utter_water_requirement_tomato_plants
+
+- story: control weeds vegetable garden path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: control_weeds_vegetable_garden
+  - action: utter_control_weeds_vegetable_garden
+
+- story: optimal planting depth seeds path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: optimal_planting_depth_seeds
+  - action: utter_optimal_planting_depth_seeds
+
+- story: improve soil drainage garden path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: improve_soil_drainage_garden
+  - action: utter_improve_soil_drainage_garden
+
+- story: cold tolerant crops early spring path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: cold_tolerant_crops_early_spring
+  - action: utter_cold_tolerant_crops_early_spring
+
+- story: identify nutrient deficiencies plants path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: identify_nutrient_deficiencies_plants
+  - action: utter_identify_nutrient_deficiencies_plants
+
+- story: advantages companion planting vegetable garden path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: advantages_companion_planting_vegetable_garden
+  - action: utter_advantages_companion_planting_vegetable_garden
+###############################
+
+- story: protect crops from pests without chemicals
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: protect_crops_from_pests_without_chemicals
+  - action: utter_protect_crops_from_pests_without_chemicals
+
+- story: stop plant diseases without strong chemicals
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: stop_plant_diseases_without_strong_chemicals
+  - action: utter_stop_plant_diseases_without_strong_chemicals
+
+- story: protect plants from diseases and pests without chemicals
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: protect_plants_from_diseases_and_pests_without_chemicals
+  - action: utter_protect_plants_from_diseases_and_pests_without_chemicals
+
+- story: crops for windy conditions
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: crops_for_windy_conditions
+  - action: utter_crops_for_windy_conditions
+
+- story: protect crops from frost damage
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: protect_crops_from_frost_damage
+  - action: utter_protect_crops_from_frost_damage
+
+- story: crops for dry weather conditions
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: crops_for_dry_weather_conditions
+  - action: utter_crops_for_dry_weather_conditions
+
+- story: adapt to market changes when planning crops
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: adapt_to_market_changes_when_planning_crops
+  - action: utter_adapt_to_market_changes_when_planning_crops
+
+- story: cover crops for soil improvement off season
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: cover_crops_for_soil_improvement_off_season
+  - action: utter_cover_crops_for_soil_improvement_off_season
+
+- story: manage excess water in fields
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: manage_excess_water_in_fields
+  - action: utter_manage_excess_water_in_fields
+
+- story: companion planting strategies for pest repellent and beneficial insects
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: companion_planting_strategies_for_pest_repellent_and_beneficial_insects
+  - action: utter_companion_planting_strategies_for_pest_repellent_and_beneficial_insects
+
+######################
+
+- story: greet and ask about utilizing organic mulches
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: utilize_organic_mulches_for_soil_conservation
+
+- story: greet and inquire about enhancing soil fertility with low-cost methods
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: enhance_soil_fertility_with_low_cost_methods
+
+- story: greet and ask about reducing post-harvest losses and improving market access
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: reduce_post_harvest_losses_and_improve_market_access
+
+- story: greet and inquire about using biochar to improve soil fertility
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: use_biochar_to_improve_soil_fertility
+
+- story: greet and ask about managing soil erosion and runoff on sloped terrain
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: manage_soil_erosion_and_runoff_on_sloped_terrain
+
+- story: greet and inquire about optimizing nutrient cycling and minimizing losses
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: optimize_nutrient_cycling_and_minimize_losses
+
+- story: greet and ask about commonly used nitrogen fertilizers
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: commonly_used_nitrogen_fertilizers
+
+- story: greet and inquire about suitable phosphorus fertilizers for root development and flowering
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: suitable_phosphorus_fertilizers_for_root_development_and_flowering
+
+- story: greet and ask about potassium fertilizers for fruit quality and disease resistance
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: potassium_fertilizers_for_fruit_quality_and_disease_resistance
+
+- story: greet and inquire about micronutrient fertilizers for correcting deficiencies in crops
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: micronutrient_fertilizers_for_correcting_deficiencies_in_crops
+
+- story: greet and inquire about organic fertilizers in India
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: organic_fertilizers_in_India
+
+- story: greet and ask about slow-release fertilizers
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: slow_release_fertilizers_for_long_term_nutrient_availability
+
+- story: greet and inquire about the best time to sow tomato seeds
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: best_time_to_sow_tomato_seeds
+
+- story: greet and ask about watering newly planted seedlings
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: watering_newly_planted_seedlings
+
+- story: greet and inquire about sowing cucumber seeds
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: best_time_to_sow_cucumber_seeds
+
+- story: greet and ask about watering garden plants in summer
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: watering_garden_plants_during_summer_months
+
+- story: greet and inquire about sowing pumpkin seeds
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: best_time_to_sow_pumpkin_seeds
+
+- story: greet and ask about watering vegetable plants
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: best_time_of_day_to_water_vegetable_plants
+
+- story: greet and inquire about sowing lettuce seeds
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: best_time_to_sow_lettuce_seeds
+
+- story: greet and ask about sowing carrot seeds
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: best_time_to_sow_carrot_seeds
+
+
+  ####################
+- story: greet and inquire about sowing carrot seeds
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: best_time_to_sow_carrot_seeds
+
+- story: greet and ask about watering potted herbs
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: watering_frequency_for_potted_herbs
+
+- story: greet and inquire about sowing onion sets
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: best_time_to_sow_onion_sets
+
+- story: greet and ask about watering fruit trees in summer
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: watering_schedule_for_fruit_trees_in_summer
+
+- story: greet and inquire about sowing spinach seeds
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: best_time_to_sow_spinach_seeds
+
+- story: greet and ask about sowing pea seeds
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: best_time_to_sow_pea_seeds
+
+- story: greet and inquire about sowing rice seeds in India
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: favorable_time_to_sow_rice_seeds_in_India
+
+- story: greet and ask about irrigation frequency for cotton crop
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: irrigation_frequency_for_cotton_crop
+
+- story: greet and inquire about sowing mustard seeds in North India
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: best_time_to_sow_mustard_seeds_in_North_India
+
+- story: greet and ask about watering vegetable crops during drought
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: watering_schedule_for_vegetable_crops_during_drought_in_South_India
+
+- story: greet and inquire about sowing chickpea seeds in central plains of India
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ideal_time_to_sow_chickpea_seeds_in_central_plains_of_India
+
+- story: optimize irrigation scheduling for sugarcane cultivation
+  steps:
+  - intent: optimize_irrigation_scheduling_sugarcane_cultivation
+  - action: utter_optimize_irrigation_scheduling_sugarcane_cultivation
+
+- story: best time to sow pigeon pea seeds
+  steps:
+  - intent: best_time_to_sow_pigeon_pea_seeds
+  - action: utter_best_time_to_sow_pigeon_pea_seeds
+
+- story: adjust watering practices for mango orchards
+  steps:
+  - intent: adjust_watering_practices_mango_orchards
+  - action: utter_adjust_watering_practices_mango_orchards
+
+- story: best time to sow wheat seeds
+  steps:
+  - intent: best_time_to_sow_wheat_seeds
+  - action: utter_best_time_to_sow_wheat_seeds
+
+- story: watering frequency for vegetable garden in summer
+  steps:
+  - intent: watering_frequency_summer_months_vegetable_garden
+  - action: utter_watering_frequency_summer_months_vegetable_garden
+
+- story: recommended time to sow millet seeds
+  steps:
+  - intent: recommended_time_to_sow_millet_seeds
+  - action: utter_recommended_time_to_sow_millet_seeds
+
+- story: adjust watering schedule for paddy fields
+  steps:
+  - intent: adjust_watering_schedule_paddy_fields
+  - action: utter_adjust_watering_schedule_paddy_fields
+
+- story: best time to water fruit orchard during dormancy
+  steps:
+  - intent: best_time_to_water_fruit_orchard_dormancy_period
+  - action: utter_best_time_to_water_fruit_orchard_dormancy_period
+
+- story: best time to sow pulses like lentils
+  steps:
+  - intent: best_time_to_sow_pulses_like_lentils
+  - action: utter_best_time_to_sow_pulses_like_lentils
+
+- story: adjust watering practices for coconut plantations
+  steps:
+  - intent: adjust_watering_practices_coconut_plantations
+  - action: utter_adjust_watering_practices_coconut_plantations
+
+###############################
+- story: Sow Sunflower Seeds
+  steps:
+  - intent: optimal_time_to_sow_sunflower_seeds
+  - action: utter_optimal_time_to_sow_sunflower_seeds
+
+- story: Adjust Watering Schedule for Tea Plantations
+  steps:
+  - intent: adjust_watering_schedule_tea_plantations_dry_season
+  - action: utter_adjust_watering_schedule_tea_plantations_dry_season
+
+- story: Sow Sugarcane Setts
+  steps:
+  - intent: recommended_time_to_sow_sugarcane_setts
+  - action: utter_recommended_time_to_sow_sugarcane_setts
+
+- story: Irrigate Banana Plantation
+  steps:
+  - intent: irrigate_banana_plantation_fruiting_stage
+  - action: utter_irrigate_banana_plantation_fruiting_stage
+
+- story: Water Jute Crop
+  steps:
+  - intent: water_jute_crop_growing_season
+  - action: utter_water_jute_crop_growing_season
+
+- story: Sow Black Gram Seeds
+  steps:
+  - intent: best_time_to_sow_black_gram_seeds
+  - action: utter_best_time_to_sow_black_gram_seeds
+
+- story: Conserve Moisture in Dry Soil
+  steps:
+  - intent: conserve_moisture_dry_soil_conditions
+  - action: utter_conserve_moisture_dry_soil_conditions
+
+- story: Apply Irrigation Techniques for Dry Soil
+  steps:
+  - intent: irrigation_techniques_areas_with_consistently_dry_soil
+  - action: utter_irrigation_techniques_areas_with_consistently_dry_soil
+
+- story: Risks of Planting in Wet Soil
+  steps:
+  - intent: risks_of_planting_crops_consistently_wet_soil
+  - action: utter_risks_of_planting_crops_consistently_wet_soil
+
+- story: Improve Drainage in Wet Soil Areas
+  steps:
+  - intent: improve_drainage_in_wet_soil_areas
+  - action: utter_improve_drainage_in_wet_soil_areas
+
+#####################
+
+- story: Cover crops improve soil health
+  steps:
+  - intent: cover_crops_improve_soil_health
+  - action: utter_cover_crops_improve_soil_health
+
+- story: Nutrient deficiencies in red soil
+  steps:
+  - intent: nutrient_deficiencies_in_red_soil
+  - action: utter_nutrient_deficiencies_in_red_soil
+
+- story: Crop varieties for red soil
+  steps:
+  - intent: crop_varieties_for_red_soil
+  - action: utter_crop_varieties_for_red_soil
+
+- story: Prevent soil erosion in red soil
+  steps:
+  - intent: prevent_soil_erosion_in_red_soil
+  - action: utter_prevent_soil_erosion_in_red_soil
+
+- story: Common crop rotation sequences
+  steps:
+  - intent: common_crop_rotation_sequences
+  - action: utter_common_crop_rotation_sequences
+
+- story: Crops after harvesting maize
+  steps:
+  - intent: crops_after_harvesting_maize
+  - action: utter_crops_after_harvesting_maize
+
+- story: Crop rotation frequency
+  steps:
+  - intent: crop_rotation_frequency
+  - action: utter_crop_rotation_frequency
+
+- story: Pest control without chemical sprays
+  steps:
+  - intent: pest_control_without_chemical_sprays
+  - action: utter_pest_control_without_chemical_sprays
+
+- story: Identify crop pest problem
+  steps:
+  - intent: identify_crop_pest_problem
+  - action: utter_identify_crop_pest_problem
+
+- story: Improve soil fertility without synthetic fertilizers
+  steps:
+  - intent: improve_soil_fertility_without_synthetic_fertilizers
+  - action: utter_improve_soil_fertility_without_synthetic_fertilizers

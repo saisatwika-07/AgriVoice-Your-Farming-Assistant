@@ -84,7 +84,6 @@ intents:
   - prevent_common_diseases_in_tomato_plants
   - ideal_soil_conditions_for_growing_wheat
   - protect_barley_crop_from_rust_diseases
-  #####
   - minimize_weed_competition
   - safety_measures_agricultural_chemicals_equipment
   - enhance_pollination
@@ -109,11 +108,102 @@ intents:
   - adapt_planting_irrigation_schedules_fluctuating_moisture
   - cover_crops_dry_soil_prevent_erosion
   - plan_crop_rotations_minimize_drought_impact
+  #############################################
+  - plan_crop_rotation
+  - water_requirement_tomato_plants
+  - control_weeds_vegetable_garden
+  - optimal_planting_depth_seeds
+  - improve_soil_drainage_garden
+  - cold_tolerant_crops_early_spring
+  - identify_nutrient_deficiencies_plants
+  - advantages_companion_planting_vegetable_garden
+  - determine_spacing_plants_garden_bed
+  - organic_control_garden_pests
+  - key_nutrients_healthy_plant_growth
+
+  ######################
+  - protect_crops_from_pests_without_chemicals
+  - stop_plant_diseases_without_strong_chemicals
+  - protect_plants_from_diseases_and_pests_without_chemicals
+  - crops_for_windy_conditions
+  - protect_crops_from_frost_damage
+  - crops_for_dry_weather_conditions
+  - adapt_to_market_changes_when_planning_crops
+  - cover_crops_for_soil_improvement_off_season
+  - manage_excess_water_in_fields
+  - companion_planting_strategies_for_pest_repellent_and_beneficial_insects
+
+  ###########################
+  - utilize_organic_mulches_for_soil_conservation
+  - enhance_soil_fertility_with_low_cost_methods
+  - reduce_post_harvest_losses_and_improve_market_access
+  - use_biochar_to_improve_soil_fertility
+  - manage_soil_erosion_and_runoff_on_sloped_terrain
+  - optimize_nutrient_cycling_and_minimize_losses
+  - commonly_used_nitrogen_fertilizers
+  - suitable_phosphorus_fertilizers_for_root_development_and_flowering
+  - potassium_fertilizers_for_fruit_quality_and_disease_resistance
+  - micronutrient_fertilizers_for_correcting_deficiencies_in_crops
+  ##################################
+  - organic_fertilizers_in_India
+  - slow_release_fertilizers_for_long_term_nutrient_availability
+  - best_time_to_sow_tomato_seeds
+  - watering_newly_planted_seedlings
+  - best_time_to_sow_cucumber_seeds
+  - watering_garden_plants_during_summer_months
+  - best_time_to_sow_pumpkin_seeds
+  - best_time_of_day_to_water_vegetable_plants
+  - best_time_to_sow_lettuce_seeds
+  - best_time_to_sow_carrot_seeds
+  ##################################
+  - watering_frequency_for_potted_herbs
+  - best_time_to_sow_onion_sets
+  - watering_schedule_for_fruit_trees_in_summer
+  - best_time_to_sow_spinach_seeds
+  - best_time_to_sow_pea_seeds
+  - favorable_time_to_sow_rice_seeds_in_India
+  - irrigation_frequency_for_cotton_crop
+  - best_time_to_sow_mustard_seeds_in_North_India
+  - watering_schedule_for_vegetable_crops_during_drought_in_South_India
+  - ideal_time_to_sow_chickpea_seeds_in_central_plains_of_India
+  ############################
+  - optimize_irrigation_scheduling_sugarcane_cultivation
+  - best_time_to_sow_pigeon_pea_seeds
+  - adjust_watering_practices_mango_orchards
+  - best_time_to_sow_wheat_seeds
+  - watering_frequency_summer_months_vegetable_garden
+  - recommended_time_to_sow_millet_seeds
+  - adjust_watering_schedule_paddy_fields
+  - best_time_to_water_fruit_orchard_dormancy_period
+  - best_time_to_sow_pulses_like_lentils
+  - adjust_watering_practices_coconut_plantations
+  #############################
+  - optimal_time_to_sow_sunflower_seeds
+  - adjust_watering_schedule_tea_plantations_dry_season
+  - recommended_time_to_sow_sugarcane_setts
+  - irrigate_banana_plantation_fruiting_stage
+  - water_jute_crop_growing_season
+  - best_time_to_sow_black_gram_seeds
+  - conserve_moisture_dry_soil_conditions
+  - irrigation_techniques_areas_with_consistently_dry_soil
+  - risks_of_planting_crops_consistently_wet_soil
+  - improve_drainage_in_wet_soil_areas
+  ######################
+  - cover_crops_improve_soil_health
+  - nutrient_deficiencies_in_red_soil
+  - crop_varieties_for_red_soil
+  - prevent_soil_erosion_in_red_soil
+  - common_crop_rotation_sequences
+  - crops_after_harvesting_maize
+  - crop_rotation_frequency
+  - pest_control_without_chemical_sprays
+  - identify_crop_pest_problem
+  - improve_soil_fertility_without_synthetic_fertilizers
 
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Greetings and welcome to Agri Voice - Your trusted farming assistant. Don't hesitate to inquire about any agriculture-related queries; I'm here to assist you with pleasure."
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -312,7 +402,6 @@ responses:
     - text: "Wheat prefers well-drained loamy soil with a neutral to slightly acidic pH."
   utter_protect_barley_crop_from_rust_diseases:
     - text: "Choose resistant varieties, practice crop rotation, and apply fungicides as a preventive measure to protect barley crops from rust diseases."
-  ################
   utter_minimize_weed_competition:
     - text: "To minimize weed competition in grain fields, you can implement effective weed control measures, including pre-emergence herbicides, mulching, and proper crop rotation."
   utter_safety_measures_agricultural_chemicals_equipment:
@@ -361,6 +450,241 @@ responses:
     - text: "Cover crops like clover, cowpeas, and winter wheat can help prevent soil erosion and improve soil structure in dry conditions."
   utter_plan_crop_rotations_minimize_drought_impact:
     - text: "Diversifying crops, implementing water-conserving practices, and selecting crops with varying water"
+  ######################################################################
+
+  utter_plan_crop_rotation:
+  - text: "Diversifying crops, implementing water-conserving practices, and selecting crops with varying water requirements can minimize the impact of drought on yield and soil health."
+
+  utter_water_requirement_tomato_plants:
+  - text: "Tomato plants typically require about 1 to 1.5 inches of water per week, either through rainfall or irrigation, to support their growth and development."
+
+  utter_control_weeds_vegetable_garden:
+  - text: "Mulching with organic materials like straw or wood chips, hand-pulling weeds, and using landscape fabric or plastic mulch can effectively control weeds in a vegetable garden."
+
+  utter_optimal_planting_depth_seeds:
+  - text: "The optimal planting depth for seeds varies depending on the type of seed and soil conditions. As a general guideline, seeds should be planted at a depth approximately two to three times their diameter."
+
+  utter_improve_soil_drainage_garden:
+  - text: "Incorporating organic matter like compost or aged manure, planting cover crops with deep root systems, and amending heavy clay soils with sand or perlite can improve soil drainage naturally."
+
+  utter_cold_tolerant_crops_early_spring:
+  - text: "Cold-tolerant crops such as lettuce, peas, spinach, kale, and radishes can be planted early in the spring when the soil is still cool."
+
+  utter_identify_nutrient_deficiencies_plants:
+  - text: "Nutrient deficiencies in plants often manifest through specific symptoms such as yellowing or browning of leaves, stunted growth, or unusual leaf discoloration, which can help in identifying the lacking nutrients."
+
+  utter_advantages_companion_planting_vegetable_garden:
+  - text: "Companion planting can help deter pests, attract"
+
+
+
+###########################################################
+
+  utter_protect_crops_from_pests_without_chemicals:
+  - text: "Natural methods for pest control include introducing beneficial insects like ladybugs or lacewings, using insecticidal soap or neem oil sprays, and practicing companion planting with pest-repelling plants."
+
+  utter_stop_plant_diseases_without_strong_chemicals:
+  - text: "We can stop plant diseases by using natural sprays made from things like copper or sulfur, making sure plants have space to breathe, and removing sick parts of plants so they don't spread their disease."
+
+  utter_protect_plants_from_diseases_and_pests_without_chemicals:
+  - text: "To protect plants from diseases and pests naturally, we can practice good garden hygiene by removing dead or diseased plant material, encourage beneficial insects like ladybugs and lacewings, and use organic sprays such as neem oil or insecticidal soap."
+
+  utter_crops_for_windy_conditions:
+  - text: "Crops that are well-suited for windy conditions include sturdy, wind-resistant varieties such as root vegetables like carrots and potatoes, leafy greens like kale and Swiss chard, and herbs like rosemary and thyme. Additionally, establishing windbreaks with tall, sturdy plants or structures can help protect more delicate crops from strong winds."
+
+  utter_protect_crops_from_frost_damage:
+  - text: "To protect crops from frost damage, consider covering them with frost blankets, watering the soil before a frost event, and planting frost-resistant varieties."
+
+  utter_crops_for_dry_weather_conditions:
+  - text: "Consider planting drought-tolerant crops like tomatoes, peppers, and beans during dry weather. These crops have deep root systems that help them access moisture from deeper soil layers."
+
+  utter_adapt_to_market_changes_when_planning_crops:
+  - text: "Diversify your crop selection to meet changing demand, stay informed about market trends, and consider selling directly to consumers through farmers' markets or CSA programs."
+
+  utter_cover_crops_for_soil_improvement_off_season:
+  - text: "Cover crops like clover, vetch, and rye can help improve soil structure by adding organic matter and fixing nitrogen, enhancing soil fertility for future crops."
+
+  utter_manage_excess_water_in_fields:
+  - text: "Implementing drainage systems like tile drains or constructing raised beds can help manage excess water by promoting proper drainage and preventing waterlogging, thus reducing the risk of root rot in crops."
+
+  utter_companion_planting_strategies_for_pest_repellent_and_beneficial_insects:
+  - text: "Companion planting combinations like planting marigolds to repel nematodes, or integrating flowering plants like borage or yarrow to attract pollinators and beneficial insects, can help reduce pest pressure and promote overall crop health."
+
+  #####################
+
+  utter_utilize_organic_mulches_for_soil_conservation:
+  - text: "Applying organic mulches around crop plants can help conserve soil moisture by reducing evaporation, suppress weed growth by blocking sunlight to weed seeds, and gradually break down to add organic matter to the soil, improving soil structure and fertility over time."
+
+  utter_enhance_soil_fertility_with_low_cost_methods:
+  - text: "Utilizing resources like animal manure, compost made from crop residues, or locally sourced organic materials such as rice husks or coconut coir can provide cost-effective ways to enrich soil fertility and sustain crop productivity."
+
+  utter_reduce_post_harvest_losses_and_improve_market_access:
+  - text: "Implementing proper post-harvest handling practices such as timely harvesting, proper storage facilities, and value-added processing can help reduce post-harvest losses. Additionally, forming farmer cooperatives, participating in farmers' markets, or accessing alternative marketing channels like online platforms can improve market access and profitability for small-scale farmers."
+
+  utter_use_biochar_to_improve_soil_fertility:
+  - text: "Biochar, a form of charcoal produced from organic materials, can be applied to soil to improve soil fertility by increasing nutrient retention and enhancing soil structure. Additionally, biochar can help improve water retention in sandy soils and promote microbial activity, leading to healthier soil and increased crop productivity."
+
+  utter_manage_soil_erosion_and_runoff_on_sloped_terrain:
+  - text: "Implementing conservation practices such as contour plowing, terracing, or constructing grassed waterways can help reduce soil erosion and runoff on sloped terrain by slowing down water flow, trapping sediment, and promoting soil stabilization with vegetation cover."
+
+  utter_optimize_nutrient_cycling_and_minimize_losses:
+  - text: "Optimizing nutrient cycling involves practices such as composting organic residues, incorporating cover crops or green manures to capture and recycle nutrients, and minimizing nutrient losses through techniques like precision fertilization or controlled-release fertilizers to match plant nutrient demand with supply."
+
+  utter_commonly_used_nitrogen_fertilizers:
+  - text: "Common nitrogen fertilizers available in India include urea, ammonium sulfate, and calcium ammonium nitrate (CAN). These fertilizers provide nitrogen, which is essential for promoting leafy growth and overall plant development."
+
+  utter_suitable_phosphorus_fertilizers_for_root_development_and_flowering:
+  - text: "Single super phosphate (SSP) and di-ammonium phosphate (DAP) are commonly used phosphorus fertilizers in India. These fertilizers are beneficial for enhancing root development, flowering, and fruiting in crops."
+
+  utter_potassium_fertilizers_for_fruit_quality_and_disease_resistance:
+  - text: "Muriate of potash (MOP) and potassium sulfate are popular potassium fertilizers in India. These fertilizers contribute to improved fruit quality, disease resistance, and overall plant vigor."
+
+  utter_micronutrient_fertilizers_for_correcting_deficiencies_in_crops:
+  - text: "Micronutrient fertilizers such as zinc sulfate, ferrous sulfate, and borax are used to correct deficiencies of zinc, iron, and boron, respectively, in crops. These fertilizers help ensure balanced nutrient uptake and healthy crop growth."
+
+###################################################
+  utter_organic_fertilizers_in_India:
+  - text: "Yes, there are several organic fertilizers available in India, including compost, vermicompost, neem cake, and bone meal. These organic fertilizers enrich the soil with organic matter and essential nutrients, promoting soil health and sustainable farming practices."
+
+  utter_slow_release_fertilizers_for_long_term_nutrient_availability:
+  - text: "Slow-release fertilizers like sulfur-coated urea (SCU) and polymer-coated urea (PCU) are used in India for providing nutrients to crops gradually over an extended period. These fertilizers ensure sustained nutrient availability and minimize nutrient losses through leaching or volatilization."
+
+  utter_best_time_to_sow_tomato_seeds:
+  - text: "Tomato seeds are typically sown indoors 6-8 weeks before the last frost date in your area. Transplant the seedlings outdoors after the danger of frost has passed and the soil has warmed up, usually in late spring or early summer."
+
+  utter_watering_newly_planted_seedlings:
+  - text: "Newly planted seedlings should be watered regularly to keep the soil evenly moist, but not waterlogged. Water them deeply whenever the top inch of soil feels dry, typically every 2-3 days depending on weather conditions."
+
+  utter_best_time_to_sow_cucumber_seeds:
+  - text: "Cucumber seeds should be sown directly into the garden soil once the soil has warmed up to at least 60°F (15°C), typically in late spring or early summer. Cucumbers thrive in warm soil and require consistent moisture for germination and growth."
+
+  utter_watering_garden_plants_during_summer_months:
+  - text: "Water your garden plants early in the morning or late in the evening to minimize water loss through evaporation. Aim to water deeply, providing 1-2 inches of water per week, and adjust watering frequency based on weather conditions and plant needs."
+
+  utter_best_time_to_sow_pumpkin_seeds:
+  - text: "Pumpkin seeds should be sown directly into the garden soil after the last frost date in your area when the soil has warmed up to at least 70°F (21°C). Pumpkins require a long growing season, so sow seeds in late spring to early summer for a fall harvest."
+
+  utter_best_time_of_day_to_water_vegetable_plants:
+  - text: "Water vegetable plants early in the morning to ensure they have access to moisture throughout the day and to minimize the risk of fungal diseases. Avoid watering during the hottest part of the day to prevent water loss through evaporation."
+
+  utter_best_time_to_sow_lettuce_seeds:
+  - text: "Lettuce seeds can be sown directly into the garden soil as soon as the soil can be worked in early spring. For a continuous harvest, sow additional lettuce seeds every 2-3 weeks until late spring. Provide consistent moisture to ensure rapid germination and growth."
+
+  utter_best_time_to_sow_carrot_seeds:
+  - text: "Carrot seeds should be sown directly into the garden soil as soon as the soil can be worked in early spring. Carrots prefer cool weather, so sow seeds before the soil temperature rises above 75°F (24°C) for best results."
+
+#########################################
+  utter_watering_frequency_for_potted_herbs:
+  - text: "Water potted herbs when the top inch of the soil feels dry to the touch. Depending on factors like temperature and sunlight, this may mean watering every 2-3 days during warmer months and less frequently during cooler periods."
+
+  utter_best_time_to_sow_onion_sets:
+  - text: "Onion sets should be planted in early spring, as soon as the soil can be worked. Onions thrive in cool weather, so planting them early allows them to establish before temperatures rise too high."
+
+  utter_watering_schedule_for_fruit_trees_in_summer:
+  - text: "Water fruit trees deeply once a week during dry spells, ensuring that the water reaches the tree's root zone. Watering early in the morning or late in the evening helps minimize water loss through evaporation and ensures efficient water uptake by the tree."
+
+  utter_best_time_to_sow_spinach_seeds:
+  - text: "Spinach seeds can be sown directly into the garden soil in early spring, as soon as the soil can be worked. Spinach prefers cool weather, so planting early ensures optimal growing conditions and prevents bolting (premature flowering)."
+
+  utter_best_time_to_sow_pea_seeds:
+  - text: "Pea seeds should be sown directly into the garden soil in early spring, as soon as the soil can be worked. Peas prefer cool weather, so planting them early ensures optimal growing conditions and a longer harvest window."
+
+  utter_favorable_time_to_sow_rice_seeds_in_India:
+  - text: "Rice seeds are traditionally sown during the monsoon season, typically between June and July, when rainfall is abundant and soil moisture levels are optimal for germination and growth."
+
+  utter_irrigation_frequency_for_cotton_crop:
+  - text: "Cotton crops require regular irrigation, especially during the flowering and boll development stage, to ensure adequate moisture for optimal fruit set and fiber development. Depending on soil type and weather conditions, irrigate cotton crops every 7-10 days."
+
+  utter_best_time_to_sow_mustard_seeds_in_North_India:
+  - text: "Mustard seeds are typically sown in North India during the rabi season, which begins in late October to early November, after the monsoon season ends. Sowing mustard early in the rabi season allows for optimal growth and development during the cooler months."
+
+  utter_watering_schedule_for_vegetable_crops_during_drought_in_South_India:
+  - text: "During periods of drought in South India, increase the frequency of watering for vegetable crops to compensate for the lack of rainfall and ensure sufficient soil moisture for plant growth. Implement water-saving techniques such as drip irrigation or mulching to maximize water efficiency."
+
+  utter_ideal_time_to_sow_chickpea_seeds_in_central_plains_of_India:
+  - text: "Chickpea seeds are traditionally sown during the rabi season in the central plains of India, typically between October and November. Sowing chickpea early in the rabi season allows for optimal growth and development under favorable winter conditions."
+###################################
+  utter_optimize_irrigation_scheduling_sugarcane_cultivation:
+  - text: "During the pre-harvest period of sugarcane cultivation in Maharashtra, irrigate the crop at regular intervals to maintain soil moisture levels and support sucrose accumulation in the stalks. Implement deficit irrigation strategies to induce ripening and improve sugar content in the cane."
+
+  utter_best_time_to_sow_pigeon_pea_seeds:
+  - text: "Pigeon pea seeds are typically sown during the kharif season in Eastern India, starting from June to July after the onset of the monsoon rains. Sowing pigeon pea early in the kharif season allows for sufficient rainfall and favorable growing conditions for optimum crop development."
+
+  utter_adjust_watering_practices_mango_orchards:
+  - text: "During the flowering and fruiting stages of mango orchards in Uttar Pradesh, provide regular irrigation to ensure consistent soil moisture for flower induction, fruit set, and development. Increase irrigation frequency during dry spells to mitigate water stress and maximize fruit yield."
+
+  utter_best_time_to_sow_wheat_seeds:
+  - text: "Wheat seeds are typically sown during the rabi season, which begins in late October to early November, coinciding with the post-monsoon period. Sowing wheat early in the rabi season ensures favorable growing conditions and optimal grain development."
+
+  utter_watering_frequency_summer_months_vegetable_garden:
+  - text: "During the summer months, water your vegetable garden deeply and regularly, ensuring that the soil remains consistently moist. Depending on weather conditions and soil type, irrigate the garden every 2-3 days to prevent moisture stress in plants."
+
+  utter_recommended_time_to_sow_millet_seeds:
+  - text: "Millet seeds are typically sown at the onset of the monsoon season in Indian semi-arid regions, usually in June or July. Sowing millet early in the monsoon season allows for sufficient rainfall to support germination and establishment of the crop."
+
+  utter_adjust_watering_schedule_paddy_fields:
+  - text: "During the vegetative stage of rice cultivation, maintain flooded conditions in paddy fields by providing regular irrigation or ensuring sufficient rainfall. Monitor soil moisture levels and adjust irrigation frequency to promote healthy root development and vigorous vegetative growth."
+
+  utter_best_time_to_water_fruit_orchard_dormancy_period:
+  - text: "Water fruit orchards sparingly during the dormancy period, ensuring that the soil remains moist but not waterlogged. Apply irrigation as needed to prevent dehydration and promote healthy bud development in fruit trees during winter months."
+
+  utter_best_time_to_sow_pulses_like_lentils:
+  - text: "Pulses like lentils (masoor) are typically sown during the rabi season in Indian agro-climatic zones, starting from October to November. Sowing pulses early in the rabi season allows for favorable growing conditions and optimum crop yield."
+
+  utter_adjust_watering_practices_coconut_plantations:
+  - text: "During the flowering and fruiting stages of coconut plantations, provide regular irrigation to ensure consistent soil moisture for flower induction, pollination, and fruit development. Maintain adequate soil moisture levels to support optimal coconut yield and quality."
+###############################
+  utter_optimal_time_to_sow_sunflower_seeds:
+  - text: "Sunflower seeds are typically sown during the kharif season, which starts with the onset of the monsoon rains in June or July. Sowing sunflower early in the kharif season ensures sufficient moisture for germination and vigorous growth."
+  utter_adjust_watering_schedule_tea_plantations_dry_season:
+  - text: "During the dry season, increase irrigation frequency for tea plantations to compensate for reduced rainfall and maintain soil moisture levels essential for healthy growth and leaf production. Ensure adequate water supply to prevent stress-induced yield losses."
+  utter_recommended_time_to_sow_sugarcane_setts:
+  - text: "Sugarcane setts are typically planted during the pre-monsoon season, usually in March or April, before the onset of the monsoon rains. Early planting allows sugarcane to establish roots and develop shoots under favorable soil and weather conditions."
+  utter_irrigate_banana_plantation_fruiting_stage:
+  - text: "Irrigate banana plantations regularly during the fruiting stage to maintain soil moisture for optimal fruit development and yield. Provide sufficient water to ensure consistent soil moisture levels, especially during periods of dry weather."
+  utter_water_jute_crop_growing_season:
+  - text: "Water jute crops regularly during the growing season to ensure adequate soil moisture for fiber development and yield. Maintain soil moisture levels to support healthy plant growth and maximize fiber quality."
+  utter_best_time_to_sow_black_gram_seeds:
+  - text: "Black gram (urad) seeds are typically sown during the kharif season in Indian states with diverse agro-climatic conditions, starting from June to July. Sowing black gram early in the kharif season ensures favorable growing conditions and optimal crop yield."
+  utter_conserve_moisture_dry_soil_conditions:
+  - text: "Farmers can conserve moisture by implementing techniques such as mulching, using drought-tolerant crop varieties, practicing reduced tillage, and adopting efficient irrigation methods like drip irrigation."
+  utter_irrigation_techniques_areas_with_consistently_dry_soil:
+  - text: "Water-saving irrigation techniques like drip irrigation, which delivers water directly to the roots of plants, are recommended for farming in areas with dry soil."
+  utter_risks_of_planting_crops_consistently_wet_soil:
+  - text: "Risks include waterlogging, nutrient leaching, and increased susceptibility to diseases. Farmers can mitigate risks by improving drainage, selecting tolerant crop varieties, and practicing good crop management."
+  utter_improve_drainage_in_wet_soil_areas:
+  - text: "Farmers can improve drainage by installing drainage ditches, constructing subsurface drainage systems, and planting deep-rooted vegetation."
+
+######################
+
+  utter_cover_crops_improve_soil_health:
+  - text: "Cover crops can add organic matter to the soil, fix nitrogen, and prevent soil erosion."
+  utter_nutrient_deficiencies_in_red_soil:
+  - text: "Common deficiencies include low levels of nitrogen, phosphorus, and organic matter."
+  utter_crop_varieties_for_red_soil:
+  - text: "Crops like groundnut, pigeon pea, cotton, and certain varieties of maize and soybeans thrive in red soil conditions."
+  utter_prevent_soil_erosion_in_red_soil:
+  - text: "Farmers can prevent erosion by using practices such as contour plowing and planting cover crops."
+  utter_common_crop_rotation_sequences:
+  - text: "Common crop rotation sequences include legumes (such as peas or beans) followed by cereals (such as wheat or maize), or root crops (such as potatoes or carrots) followed by leafy greens (such as lettuce or spinach)."
+  utter_crops_after_harvesting_maize:
+  - text: "After maize, I could consider planting legumes like beans or peas, which naturally fix nitrogen in the soil, enriching it for the next crop."
+  utter_crop_rotation_frequency:
+  - text: "It's good practice to rotate crops every season or every few years to maintain soil health and prevent the depletion of specific nutrients."
+  utter_pest_control_without_chemical_sprays:
+  - text: "By encouraging beneficial insects like ladybugs and lacewings that eat pests, planting trap crops to lure pests away, and using physical barriers like row covers, I can manage pests naturally."
+  utter_identify_crop_pest_problem:
+  - text: "By regularly inspecting my crops for signs of damage, such as chewed leaves or stunted growth, and by setting up monitoring traps, I can detect pests early and take action before they become a problem."
+  utter_improve_soil_fertility_without_synthetic_fertilizers:
+  - text: "By composting crop residues and animal manure, planting cover crops to add organic matter to the soil, and using natural mineral amendments like rock phosphate, I can keep my soil fertile organically."
+
+
+
+
+
+
+
+
 
 
 actions:

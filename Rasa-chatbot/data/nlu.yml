@@ -591,3 +591,502 @@ nlu:
     - In areas with occasional drought, how can farmers plan crop rotations to minimize the impact on overall yield and soil health?
     - Crop rotation strategies to mitigate drought impact on yield and soil health?
     - Planning crop rotations to deal with occasional droughts?
+
+
+################################
+# new data
+################################
+
+- intent: plan_crop_rotation
+  examples: |
+    - In areas with occasional drought, how can farmers plan crop rotations to minimize the impact on overall yield and soil health?
+    - What strategies can farmers use to plan crop rotations in drought-prone areas?
+    - How does crop rotation help mitigate the effects of drought on soil health and crop yield?
+
+- intent: water_requirement_tomato_plants
+  examples: |
+    - How much water is necessary for tomato plants during their growing season?
+    - What is the recommended water intake for tomato plants?
+    - How often should tomato plants be watered to support their growth?
+
+- intent: control_weeds_vegetable_garden
+  examples: |
+    - What are effective methods for controlling weeds in a vegetable garden?
+    - How can weeds be managed in a vegetable garden?
+    - What are some strategies to prevent weed growth in a vegetable garden?
+
+- intent: optimal_planting_depth_seeds
+  examples: |
+    - How can one determine the optimal planting depth for seeds?
+    - What factors should be considered when determining the planting depth for seeds?
+    - What is the recommended depth for planting seeds in different soil types?
+
+- intent: improve_soil_drainage_garden
+  examples: |
+    - What are some natural methods for improving soil drainage in a garden?
+    - How can soil drainage be enhanced in a garden setting?
+    - What natural amendments can be added to improve soil drainage?
+
+- intent: cold_tolerant_crops_early_spring
+  examples: |
+    - What are some cold-tolerant crops suitable for early spring planting?
+    - Which vegetables can withstand cold temperatures for early planting in spring?
+    - What crops can be sown in the garden at the beginning of spring when temperatures are still low?
+
+- intent: identify_nutrient_deficiencies_plants
+  examples: |
+    - How can one identify nutrient deficiencies in plants?
+    - What are the symptoms of nutrient deficiencies in plants?
+    - What visual cues indicate that a plant is lacking essential nutrients?
+
+- intent: advantages_companion_planting_vegetable_garden
+  examples: |
+    - What are the advantages of companion planting in a vegetable garden?
+    - How does companion planting benefit vegetable crops?
+    - Why is companion planting recommended for vegetable gardens?
+
+- intent: determine_spacing_plants_garden_bed
+  examples: |
+    - How can one determine the appropriate spacing between plants in a garden bed?
+    - What factors influence the spacing of plants in a garden bed?
+    - What guidelines should be followed when spacing plants in a garden?
+
+- intent: organic_control_garden_pests
+  examples: |
+    - What are some organic methods for controlling common garden pests like aphids or caterpillars?
+    - How can garden pests be managed without using chemical pesticides?
+    - What natural remedies are effective for pest control in gardens?
+
+- intent: key_nutrients_healthy_plant_growth
+  examples: |
+    - What are the key nutrients necessary for healthy plant growth, and how can they be supplied to plants?
+    - Which nutrients are essential for optimal plant development?
+    - How can plants be provided with the necessary nutrients for healthy growth?
+
+
+###########################
+
+- intent: protect_crops_from_pests_without_chemicals
+  examples: |
+    - How can gardeners protect their crops from common pests like aphids and caterpillars without using chemical pesticides?
+    - What are natural methods to safeguard crops from pests like aphids and caterpillars without resorting to chemical pesticides?
+    - How can I prevent pest damage to my crops organically, especially from insects like aphids and caterpillars?
+
+- intent: stop_plant_diseases_without_strong_chemicals
+  examples: |
+    - What can we do to stop plant diseases without using strong chemicals?
+    - How can plant diseases be controlled naturally without the use of harsh chemical treatments?
+    - What are some gentle approaches to prevent plant diseases in the garden without resorting to strong chemical interventions?
+
+- intent: protect_plants_from_diseases_and_pests_without_chemicals
+  examples: |
+    - How can we protect plants from diseases and pests without using chemicals?
+    - What are some natural ways to defend plants against diseases and pests without relying on chemical solutions?
+    - Are there organic methods available to shield plants from diseases and pests without resorting to chemical treatments?
+
+- intent: crops_for_windy_conditions
+  examples: |
+    - What crops are suitable for windy conditions?
+    - Which plants can withstand strong winds in the garden?
+    - What vegetables or herbs are resilient enough to thrive in windy environments?
+
+- intent: protect_crops_from_frost_damage
+  examples: |
+    - How can I protect my crops from frost damage during cold weather?
+    - What measures should I take to shield my plants from frost harm in chilly climates?
+    - Are there any strategies to safeguard crops from frost injury without using artificial heating methods?
+
+- intent: crops_for_dry_weather_conditions
+  examples: |
+    - Which crops should I plant during dry weather conditions?
+    - What are the best vegetables to grow in arid climates?
+    - What plants are suitable for drought conditions in the garden?
+
+- intent: adapt_to_market_changes_when_planning_crops
+  examples: |
+    - How can I adapt to changes in the market when planning my crops?
+    - What strategies should I employ to respond to market fluctuations while preparing my agricultural produce?
+    - How can I adjust my crop selection to meet evolving consumer demands and market trends?
+
+- intent: cover_crops_for_soil_improvement_off_season
+  examples: |
+    - What cover crops are best for improving soil structure and fertility during the off-season?
+    - Which green manures should I sow to enhance soil quality during the non-growing periods?
+    - What are some recommended cover crops for enriching soil health during fallow periods?
+
+- intent: manage_excess_water_in_fields
+  examples: |
+    - How can I manage excess water in my fields during periods of heavy rainfall to prevent waterlogging and root rot?
+    - What techniques can I employ to handle excessive water in the fields during rainy seasons, minimizing waterlogging and root issues?
+    - Are there any strategies to mitigate waterlogging and root rot problems caused by excessive rainfall in agricultural fields?
+
+- intent: companion_planting_strategies_for_pest_repellent_and_beneficial_insects
+  examples: |
+    - What are some companion planting strategies I can use to naturally repel pests and attract beneficial insects to my crops?
+    - How can I integrate companion planting to deter pests and encourage beneficial insects in the garden?
+    - Are there any recommended plant combinations for companion planting that aid in pest control and pollinator attraction?
+
+###############
+
+- intent: utilize_organic_mulches_for_soil_conservation
+  examples: |
+    - How can I utilize organic mulches like straw or wood chips to conserve soil moisture and suppress weed growth in my fields?
+    - What are some methods for using organic mulches such as straw or wood chips to conserve soil moisture and control weeds in my fields?
+    - Can you provide tips on using organic mulches like straw or wood chips to improve soil moisture retention and inhibit weed growth in my fields?
+
+- intent: enhance_soil_fertility_with_low_cost_methods
+  examples: |
+    - What are some low-cost methods for enhancing soil fertility using locally available resources?
+    - How can I improve soil fertility affordably using resources available in my local area?
+    - Can you suggest cost-effective strategies for enriching soil fertility with materials found locally?
+
+- intent: reduce_post_harvest_losses_and_improve_market_access
+  examples: |
+    - What are some strategies for reducing post-harvest losses and improving market access for small-scale farmers in rural areas?
+    - How can small-scale farmers in rural areas minimize post-harvest losses and increase market accessibility?
+    - Can you provide tips for improving market access and reducing post-harvest losses for small-scale farmers in rural regions?
+
+- intent: use_biochar_to_improve_soil_fertility
+  examples: |
+    - How can I use biochar to improve soil fertility and water retention on my farm?
+    - What are the benefits of incorporating biochar into the soil for enhancing soil fertility and moisture retention?
+    - Can you explain how biochar can be applied to improve soil fertility and water retention on agricultural land?
+
+- intent: manage_soil_erosion_and_runoff_on_sloped_terrain
+  examples: |
+    - What are some effective ways to manage soil erosion and runoff on sloped terrain?
+    - How can I prevent soil erosion and runoff on hilly terrain to protect my crops and soil?
+    - Can you suggest methods for controlling soil erosion and runoff in areas with sloped terrain?
+
+- intent: optimize_nutrient_cycling_and_minimize_losses
+  examples: |
+    - How can I optimize nutrient cycling and minimize nutrient losses in my farming system?
+    - What practices can I adopt to ensure efficient nutrient cycling and reduce nutrient losses in my agricultural operations?
+    - Can you provide guidance on maximizing nutrient utilization and minimizing nutrient losses in my farm?
+
+- intent: commonly_used_nitrogen_fertilizers
+  examples: |
+    - What are some commonly used nitrogen fertilizers for promoting plant growth?
+    - Can you list some nitrogen fertilizers commonly used in agriculture for enhancing crop productivity?
+    - Which nitrogen fertilizers are popularly utilized to stimulate plant growth and development?
+
+- intent: suitable_phosphorus_fertilizers_for_root_development_and_flowering
+  examples: |
+    - Which phosphorus fertilizer is suitable for improving root development and flowering in crops?
+    - Can you recommend a phosphorus fertilizer that promotes root growth and flowering in plants?
+    - What phosphorus fertilizers are effective for enhancing root development and flowering in agricultural crops?
+
+- intent: potassium_fertilizers_for_fruit_quality_and_disease_resistance
+  examples: |
+    - What are some potassium fertilizers used to improve fruit quality and disease resistance in plants?
+    - Can you suggest potassium fertilizers that enhance fruit quality and disease resistance in agricultural crops?
+    - Which potassium fertilizers are beneficial for improving fruit quality and disease resistance in plants?
+
+- intent: micronutrient_fertilizers_for_correcting_deficiencies_in_crops
+  examples: |
+    - Which micronutrient fertilizers are recommended for correcting deficiencies in crops?
+    - Can you list some micronutrient fertilizers used to address deficiencies in agricultural crops?
+    - What are some micronutrient fertilizers suitable for correcting deficiencies in various crops?
+
+###########################
+
+- intent: organic_fertilizers_in_India
+  examples: |
+    - Are there organic fertilizers available in India for sustainable farming practices?
+    - Can you tell me about organic fertilizers suitable for sustainable farming in India?
+    - What organic fertilizers are commonly used in India for sustainable agriculture?
+
+- intent: slow_release_fertilizers_for_long_term_nutrient_availability
+  examples: |
+    - What are some slow-release fertilizers suitable for long-term nutrient availability in crops?
+    - Can you recommend slow-release fertilizers for providing nutrients to crops over an extended period?
+    - Which fertilizers release nutrients gradually for sustained crop growth?
+
+- intent: best_time_to_sow_tomato_seeds
+  examples: |
+    - When is the best time to sow tomato seeds for optimal growth?
+    - Can you advise me on the ideal timing for sowing tomato seeds to ensure successful growth?
+    - What is the recommended sowing time for tomato seeds to achieve the best results?
+
+- intent: watering_newly_planted_seedlings
+  examples: |
+    - How often should I water my newly planted seedlings to ensure they establish well?
+    - What is the watering frequency required for newly planted seedlings to promote healthy establishment?
+    - Can you provide guidance on watering newly planted seedlings for successful growth?
+
+- intent: best_time_to_sow_cucumber_seeds
+  examples: |
+    - When is the ideal time to sow cucumber seeds for a bountiful harvest?
+    - Can you recommend the best timing for sowing cucumber seeds to maximize yield?
+    - What is the optimal sowing time for cucumber seeds to ensure abundant harvest?
+
+- intent: watering_garden_plants_during_summer_months
+  examples: |
+    - How can I determine the best time to water my garden plants during hot summer months?
+    - What is the recommended watering schedule for garden plants in hot summer weather?
+    - Can you advise me on watering practices for garden plants during the summer season?
+
+- intent: best_time_to_sow_pumpkin_seeds
+  examples: |
+    - When should I sow pumpkin seeds to ensure they mature in time for harvest before the first frost?
+    - Can you recommend the optimal sowing time for pumpkin seeds for a successful harvest?
+    - What is the recommended timing for sowing pumpkin seeds to avoid frost damage?
+
+- intent: best_time_of_day_to_water_vegetable_plants
+  examples: |
+    - What is the best time of day to water vegetable plants to minimize water stress and maximize water uptake?
+    - Can you advise me on the optimal timing for watering vegetable plants to ensure efficient water absorption?
+    - When should I water vegetable plants during the day to prevent water loss and promote healthy growth?
+
+- intent: best_time_to_sow_lettuce_seeds
+  examples: |
+    - When should I sow lettuce seeds for a continuous harvest throughout the growing season?
+    - Can you recommend the ideal timing for sowing lettuce seeds to maintain a steady supply?
+    - What is the appropriate sowing time for lettuce seeds to ensure successive harvests?
+
+- intent: best_time_to_sow_carrot_seeds
+  examples: |
+    - When is the appropriate time to sow carrot seeds for a successful crop?
+    - Can you advise me on the best timing for sowing carrot seeds to achieve good yields?
+    - What is the recommended sowing time for carrot seeds to ensure healthy carrot production?
+
+  ###################################################
+
+- intent: watering_frequency_for_potted_herbs
+  examples: |
+    - How frequently should I water my potted herbs to keep them healthy?
+    - Can you provide guidance on the watering frequency required for potted herbs to maintain their health?
+    - What is the recommended watering schedule for potted herbs to ensure their well-being?
+
+- intent: best_time_to_sow_onion_sets
+  examples: |
+    - What is the best time to sow onion sets for a successful harvest?
+    - When should I plant onion sets to ensure a successful onion harvest?
+    - Can you advise me on the optimal timing for sowing onion sets?
+
+- intent: watering_schedule_for_fruit_trees_in_summer
+  examples: |
+    - When should I water my fruit trees during the summer months to support fruit development?
+    - Can you recommend a watering schedule for fruit trees during the summer to promote fruit growth?
+    - What is the ideal watering time for fruit trees in summer to encourage fruit development?
+
+- intent: best_time_to_sow_spinach_seeds
+  examples: |
+    - What is the recommended time for sowing spinach seeds for a productive harvest?
+    - When is the best time to sow spinach seeds to ensure a bountiful spinach harvest?
+    - Can you advise me on the ideal timing for sowing spinach seeds?
+
+- intent: best_time_to_sow_pea_seeds
+  examples: |
+    - When is the best time to sow pea seeds for a productive harvest?
+    - What is the optimal sowing time for pea seeds to ensure a successful pea harvest?
+    - Can you recommend the ideal timing for sowing pea seeds?
+
+- intent: favorable_time_to_sow_rice_seeds_in_India
+  examples: |
+    - When is the most favorable time to sow rice seeds in Indian agricultural regions?
+    - Can you advise me on the ideal timing for sowing rice seeds in Indian agriculture?
+    - What is the recommended time for sowing rice seeds in India?
+
+- intent: irrigation_frequency_for_cotton_crop
+  examples: |
+    - How frequently should I irrigate my cotton crop during the flowering and boll development stage?
+    - Can you recommend an irrigation schedule for cotton crops during flowering and boll development?
+    - What is the optimal irrigation frequency for cotton crops during flowering and boll development?
+
+- intent: best_time_to_sow_mustard_seeds_in_North_India
+  examples: |
+    - What is the recommended time to sow mustard seeds for winter cultivation in North India?
+    - When should I sow mustard seeds for successful winter cultivation in North India?
+    - Can you advise me on the ideal timing for sowing mustard seeds in North India?
+
+- intent: watering_schedule_for_vegetable_crops_during_drought_in_South_India
+  examples: |
+    - How should I adjust my watering schedule for vegetable crops during periods of drought in South India?
+    - Can you provide guidance on watering vegetable crops during drought in South India?
+    - What is the recommended watering schedule for vegetable crops during drought conditions in South India?
+
+- intent: ideal_time_to_sow_chickpea_seeds_in_central_plains_of_India
+  examples: |
+    - When is the ideal time to sow chickpea (chana) seeds for a successful crop in the central plains of India?
+    - Can you advise me on the optimal timing for sowing chickpea seeds in the central plains of India?
+    - What is the recommended sowing time for chickpea (chana) seeds in the central plains of India?
+
+########################
+
+- intent: optimize_irrigation_scheduling_sugarcane_cultivation
+  examples: |
+    - How can I optimize irrigation scheduling for sugarcane cultivation in Maharashtra during the pre-harvest period?
+    - What's the best way to schedule irrigation for sugarcane in Maharashtra before harvesting?
+    - Tips for optimizing irrigation scheduling for sugarcane cultivation in Maharashtra pre-harvest?
+- intent: best_time_to_sow_pigeon_pea_seeds
+  examples: |
+    - When is the best time to sow pigeon pea (arhar) seeds for a high-yielding crop in Eastern India?
+    - What is the optimal time to plant pigeon pea seeds for high yield in Eastern India?
+    - Recommended time for sowing pigeon pea seeds in Eastern India for maximum yield?
+- intent: adjust_watering_practices_mango_orchards
+  examples: |
+    - How should I adjust my watering practices for mango orchards in Uttar Pradesh during the flowering and fruiting stages?
+    - Best watering practices for mango orchards in Uttar Pradesh during flowering and fruiting?
+    - Tips for adjusting watering practices for mango orchards in Uttar Pradesh during flowering and fruiting?
+- intent: best_time_to_sow_wheat_seeds
+  examples: |
+    - When is the appropriate time to sow wheat seeds for a productive harvest in India?
+    - What is the best time of year to plant wheat seeds for a good harvest in India?
+    - Optimal timing for sowing wheat seeds in India for a successful crop?
+- intent: watering_frequency_summer_months_vegetable_garden
+  examples: |
+    - How often should I water my vegetable garden during the summer months to prevent moisture stress?
+    - What's the recommended watering frequency for a vegetable garden in summer to avoid moisture stress?
+    - How frequently should I irrigate my vegetable garden in summer to keep it healthy?
+- intent: recommended_time_to_sow_millet_seeds
+  examples: |
+    - What is the recommended time to sow millet seeds for cultivation in Indian semi-arid regions?
+    - When should I sow millet seeds for growing them in Indian semi-arid regions?
+    - Optimal timing for sowing millet seeds in Indian semi-arid regions for successful cultivation?
+- intent: adjust_watering_schedule_paddy_fields
+  examples: |
+    - How can I adjust my watering schedule for paddy fields during the vegetative stage to optimize rice yield?
+    - Tips for adjusting watering schedule for rice fields during vegetative stage for optimal yield?
+    - What's the best way to schedule irrigation for rice fields during the vegetative stage?
+- intent: best_time_to_water_fruit_orchard_dormancy_period
+  examples: |
+    - When should I water my fruit orchard during the dormancy period to support tree health and bud development?
+    - Best time for watering fruit orchard during dormancy to aid tree health and bud development?
+    - Recommended watering schedule for fruit orchard during dormancy to promote tree health?
+- intent: best_time_to_sow_pulses_like_lentils
+  examples: |
+    - What is the best time to sow pulses such as lentils (masoor) for cultivation in Indian agro-climatic zones?
+    - When should I sow lentils (masoor) for cultivation in Indian agro-climatic zones?
+    - Optimal timing for sowing pulses like lentils (masoor) for successful cultivation?
+- intent: adjust_watering_practices_coconut_plantations
+  examples: |
+    - How can I adjust my watering practices for coconut plantations during the flowering and fruiting stages to enhance yield?
+    - Tips for adjusting watering practices for coconut plantations during flowering and fruiting to increase yield?
+    - Best watering practices for coconut plantations during flowering and fruiting to maximize yield?
+
+
+##################
+
+- intent: optimal_time_to_sow_sunflower_seeds
+  examples: |
+    - When is the optimal time to sow sunflower seeds for cultivation in India?
+    - What is the best time to plant sunflower seeds in India?
+    - When should I sow sunflower seeds for optimal growth?
+    - When do I plant sunflower seeds for cultivation?
+
+- intent: adjust_watering_schedule_tea_plantations_dry_season
+  examples: |
+    - How should I adjust my watering schedule for tea plantations during the dry season to support healthy growth and leaf production?
+    - What is the watering schedule for tea plantations in the dry season?
+    - How often should I water tea plantations during the dry season?
+    - How to water tea plantations during dry weather?
+
+- intent: recommended_time_to_sow_sugarcane_setts
+  examples: |
+    - What is the recommended time to sow sugarcane setts for planting in Indian sugarcane-growing regions?
+    - When should I plant sugarcane setts for cultivation?
+    - When is the best time to sow sugarcane setts?
+    - What time of the year should I sow sugarcane setts?
+
+- intent: irrigate_banana_plantation_fruiting_stage
+  examples: |
+    - How often should I irrigate my banana plantation during the fruiting stage to support fruit development and yield?
+    - What is the irrigation frequency for banana plantations during fruiting?
+    - When to water banana plantations during fruiting?
+    - How to irrigate banana plantation for maximum fruit yield?
+
+- intent: water_jute_crop_growing_season
+  examples: |
+    - When should I water my jute crop during the growing season to promote fiber quality and yield?
+    - What is the watering schedule for jute crop during growth?
+    - How often should I water jute crop during the growing season?
+    - What is the best time to irrigate jute crop for fiber production?
+
+- intent: best_time_to_sow_black_gram_seeds
+  examples: |
+    - What is the best time to sow black gram (urad) seeds for cultivation in Indian states with diverse agro-climatic conditions?
+    - When to sow black gram seeds for optimal yield?
+    - When is the recommended time to plant black gram seeds?
+    - How to decide when to sow black gram seeds in India?
+
+- intent: conserve_moisture_dry_soil_conditions
+  examples: |
+    - How can farmers conserve moisture in dry soil conditions to support crop growth?
+    - What are the methods for conserving moisture in dry soil?
+    - Techniques for conserving moisture in arid soil conditions?
+    - How to retain moisture in dry soil for crops?
+
+- intent: irrigation_techniques_areas_with_consistently_dry_soil
+  examples: |
+    - What irrigation techniques are recommended for farming in areas with consistently dry soil?
+    - How to irrigate in regions with dry soil conditions?
+    - Which irrigation methods are suitable for dry soil areas?
+    - Best irrigation practices for dry soil farming?
+
+- intent: risks_of_planting_crops_consistently_wet_soil
+  examples: |
+    - What are the risks associated with planting crops in areas with consistently wet soil, and how can farmers mitigate these risks?
+    - Risks of planting crops in consistently wet soil?
+    - How to deal with soil moisture in wet areas for crops?
+    - Mitigation strategies for planting in wet soil conditions?
+
+- intent: improve_drainage_in_wet_soil_areas
+  examples: |
+    - How can farmers improve drainage in areas with wet soil?
+    - Techniques for enhancing drainage in wet soil regions?
+    - Methods for better drainage in saturated soil?
+    - Improving soil drainage in wet areas?
+
+############################
+
+- intent: cover_crops_improve_soil_health
+  examples: |
+    - How can farmers utilize cover crops or green manure to improve soil health in wet soil regions?
+    - What are the benefits of using cover crops or green manure in wet soil areas?
+    - Can cover crops help improve soil health in regions with high moisture?
+- intent: nutrient_deficiencies_in_red_soil
+  examples: |
+    - What are the key nutrient deficiencies commonly found in red soil?
+    - Which nutrients are typically lacking in red soil?
+    - What deficiencies should I look out for in red soil?
+- intent: crop_varieties_for_red_soil
+  examples: |
+    - Which crop varieties thrive in red soil conditions?
+    - What crops are suitable for growing in red soil?
+    - Can you recommend crops that do well in red soil?
+- intent: prevent_soil_erosion_in_red_soil
+  examples: |
+    - How can farmers prevent soil erosion and loss of soil fertility in red soil?
+    - What measures can be taken to reduce soil erosion in regions with red soil?
+    - Are there effective ways to protect red soil from erosion?
+- intent: common_crop_rotation_sequences
+  examples: |
+    - What are some common crop rotation sequences used by farmers?
+    - Can you provide examples of crop rotation patterns followed by farmers?
+    - How do farmers typically rotate their crops?
+- intent: crops_after_harvesting_maize
+  examples: |
+    - What crops should I plant after harvesting maize to keep my soil fertile?
+    - Which crops can I rotate with maize to maintain soil fertility?
+    - After harvesting maize, what should I plant next?
+- intent: crop_rotation_frequency
+  examples: |
+    - How often should I rotate crops on my farm?
+    - Is there a recommended frequency for crop rotation?
+    - Should I rotate crops every season?
+- intent: pest_control_without_chemical_sprays
+  examples: |
+    - How can I control pests without resorting to chemical sprays?
+    - Are there natural methods for pest control that don't involve chemical sprays?
+    - What alternatives are there to using chemical sprays for pest control?
+- intent: identify_crop_pest_problem
+  examples: |
+    - How can I tell if my crop has a pest problem?
+    - What are the signs of pest infestation in crops?
+    - Are there any indicators that my crop is being affected by pests?
+- intent: improve_soil_fertility_without_synthetic_fertilizers
+  examples: |
+    - How can I improve soil fertility without using synthetic fertilizers?
+    - Are there natural ways to enhance soil fertility without synthetic fertilizers?
+    - What organic methods can I use to increase soil fertility without relying on synthetic fertilizers?
