@@ -5,6 +5,7 @@ import hbs from "hbs";
 import mongoose from "mongoose";
 import axios  from "axios";
 
+import keys from "./keys/config.cjs";
 import userDetails from "./mongodb.js";
 import farmerNews from "./web-scraping-news.js";
 import farmerNewsEt from "./web-scraping-et.js";
@@ -32,7 +33,7 @@ app.use(session({
 }));
 
 //connect to cloud mongoDB
-const mongoURL = "mongodb+srv://revanthdanduboina:Welcome123@logindetails.qab1dl6.mongodb.net/?retryWrites=true&w=majority";
+const mongoURL = keys.mongoDbUrl;
 
 mongoose.connect(mongoURL).then(()=>{
     console.log("MongoDB Connection Successful");
@@ -77,7 +78,7 @@ var combinedData = [];
 
 
 app.get("/home", isAuthenticated, (req, res) => {
-    var rasaIsEmpty = rasaResponses.length === 0;
+    var rasaIsEmpty = combinedData.length === 0;
     res.render("home", {combinedData, rasaIsEmpty, farmerNews, farmerNewsEt})
 });
 
@@ -128,6 +129,7 @@ app.post("/login",async(req,res)=>{
         if (existingUser) {
             //checking if password matches with user or not
             if(existingUser.password === loginPassword){
+                combinedData = existingUser.userChat;
                 console.log("Login Successful");
                 
                 //Storeing user login authuntication details in session
@@ -206,7 +208,7 @@ async function getOpenAiResponse(prompt){
 
     // Configuring the request headers
     const headers = {
-        'Authorization': 'Bearer' // Example of an authorization header
+        'Authorization': 'Bearer ' + keys.openaiApiKey
     };
 
     // HTTPS endpoint URL
@@ -215,7 +217,6 @@ async function getOpenAiResponse(prompt){
     try {
         // Making the POST request using Axios and await its result
         const response = await axios.post(url, postData, { headers });
-        console.log('Response:', response.data.choices[0].message.content);
         return response.data.choices[0].message.content;
     } catch (error) {
         console.error('Error:', error);
@@ -248,7 +249,6 @@ app.post("/postRasa", async (req,res)=>{
 
     if(!rasaText){
         rasaText = await getOpenAiResponse(engUserPrompt);
-        console.log(rasaText);
         // rasaText = "Im unable to understand, please try rephrasing the sentance";
     }
 
@@ -272,7 +272,6 @@ async function updateUserChat(userEmail , updatedChat){
         const filter = {userEmail : userEmail}
         const update = {userChat : updatedChat}
         const data = await userDetails.findOneAndUpdate(filter , update);
-        console.log(data.userEmail);
     } catch (error) {
         console.log('Erroe Whilte updateing user chat');
     }
