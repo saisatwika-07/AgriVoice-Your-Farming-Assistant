@@ -9,7 +9,6 @@ import userDetails from "./mongodb.js";
 import farmerNews from "./web-scraping-news.js";
 import farmerNewsEt from "./web-scraping-et.js";
 import translateText from "./translate.cjs";
-import { log } from "console";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -40,6 +39,7 @@ mongoose.connect(mongoURL).then(()=>{
     app.listen(port,()=>{
         console.log(`Server is running on port ${port}`);
     })
+    
 }).catch(()=>{
     console.log("MongoDB connection failed");
 })
@@ -85,7 +85,6 @@ app.get("/home", isAuthenticated, (req, res) => {
 
 //User registration on form submission
 app.post("/register",async(req,res)=>{
-
     try {
         const existingUser = await userDetails.findOne({ userEmail: req.body.userEmail });
 
@@ -188,6 +187,43 @@ async function getRasaResponse(userPrompt) {
     }
 }
 
+// Function to get response from open ai
+async function getOpenAiResponse(prompt){
+    // Data to be sent in the POST request (in JSON format)
+    const postData = {
+        "model": "gpt-3.5-turbo",
+        "messages": [
+            {
+                "role": "system",
+                "content": "Act as an expert in the field of agriculture in India, you are an assistant for all farmer's daily needs and help to answer their questions. Keep your answers short and sweet until the user asks for a detailed explanation. Use simple and easy-to-understand vocabulary."
+            },
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ]
+    };
+
+    // Configuring the request headers
+    const headers = {
+        'Authorization': 'Bearer' // Example of an authorization header
+    };
+
+    // HTTPS endpoint URL
+    const url = 'https://api.openai.com/v1/chat/completions';
+
+    try {
+        // Making the POST request using Axios and await its result
+        const response = await axios.post(url, postData, { headers });
+        console.log('Response:', response.data.choices[0].message.content);
+        return response.data.choices[0].message.content;
+    } catch (error) {
+        console.error('Error:', error);
+        return 'Im still learning, please try rephrasing the question.';
+    }
+}
+
+
 
 // Post method from UI when user submits prompt
 
@@ -211,7 +247,9 @@ app.post("/postRasa", async (req,res)=>{
     let rasaText = await getRasaResponse(engUserPrompt);
 
     if(!rasaText){
-        rasaText = "Im unable to understand, please try rephrasing the sentance";
+        rasaText = await getOpenAiResponse(engUserPrompt);
+        console.log(rasaText);
+        // rasaText = "Im unable to understand, please try rephrasing the sentance";
     }
 
     try {
@@ -222,5 +260,20 @@ app.post("/postRasa", async (req,res)=>{
     combinedData.unshift({rasaResponse: rasaResponse , userPrompt : userPrompt})
     userPrompts.unshift(userPrompt)
     rasaResponses.unshift(rasaResponse);
+    await updateUserChat(req.session.user.userEmail , combinedData)
     res.redirect("/home")
 })
+
+
+// Update user chat in DB
+
+async function updateUserChat(userEmail , updatedChat){
+    try {
+        const filter = {userEmail : userEmail}
+        const update = {userChat : updatedChat}
+        const data = await userDetails.findOneAndUpdate(filter , update);
+        console.log(data.userEmail);
+    } catch (error) {
+        console.log('Erroe Whilte updateing user chat');
+    }
+}

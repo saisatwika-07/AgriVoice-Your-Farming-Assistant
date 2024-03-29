@@ -33,7 +33,6 @@ async function scrapeFarmerNews() {
 // Usage
 scrapeFarmerNews().then(farmerNews => {
     console.log("Farmers news successfully scraped");
-    console.log(farmerNewsEt);
 });
 
 

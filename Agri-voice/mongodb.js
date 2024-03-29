@@ -13,6 +13,9 @@ const RegisterSchema = new mongoose.Schema({
     password:{
         type:String,
         required:true
+    },
+    userChat:{
+        type: Array
     }
 });
 
