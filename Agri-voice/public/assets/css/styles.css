@@ -190,6 +190,17 @@ body{
     height: 100%;
 } */
 
+.play-response-btn{
+    position: absolute;
+    color: var(--theme-color-dark-green);
+    font-size: 15px;
+    bottom: 0px;
+    left: 100%;
+    border: 0;
+    background-color: transparent;
+    padding: 10px;
+}
+
 .latest-news-container .news-items{
     padding: 5px;
     border-radius: 10px;

@@ -22,7 +22,6 @@ async function scrapeFarmerNews() {
 
             farmerNewsEt.push({ title, url , date});
         });
-        
         return farmerNewsEt;
     } catch (error) {
         console.error('Error scraping farmer news:', error);

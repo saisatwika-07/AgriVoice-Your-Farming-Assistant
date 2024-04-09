@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@botpress/client": "^0.11.0",
+    "@google-cloud/text-to-speech": "^5.2.0",
     "@google-cloud/translate": "^8.1.0",
     "axios": "^1.6.7",
     "cheerio": "^1.0.0-rc.12",

@@ -102,8 +102,14 @@
                 <div id="transcription"></div>
                 <div class="output-container">
                     {{#each combinedData}}
-                    <div class="d-flex justify-content-start">
-                        <p class="rasaMessage">{{rasaResponse}}</p>
+                    <div class="d-flex justify-content-start position-relative">
+                        <p class="rasaMessage position-relative">
+                            {{rasaResponse}}
+                            {{#if rasaResponse}}
+                                <button class="play-response-btn" data-text="{{rasaResponse}}" data-lang="{{userLang}}"><i class="fa-solid fa-volume-high"></i></button>
+                            {{/if}}
+                        </p>
+                        
                     </div>
                     <div class="d-flex justify-content-end">
                         <p class="userMessage">{{userPrompt}}</p>
@@ -128,30 +134,7 @@
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="assets/js/speech.js"></script>
-
-
-
-    {{!-- Botpress chatbot widget --}}
-
-    {{!-- <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-    <script>
-    window.botpressWebChat.init({
-        "composerPlaceholder": "Chat with Your Farming Assistant",
-        "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
-        "botId": "33c93763-b677-45fc-a5fb-5fd2ab6bf76f",
-        "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
-        "messagingUrl": "https://messaging.botpress.cloud",
-        "clientId": "33c93763-b677-45fc-a5fb-5fd2ab6bf76f",
-        "webhookId": "a2235f4e-e97e-44d8-af25-c055bfff6323",
-        "lazySocket": true,
-        "themeName": "prism",
-        "botName": "Your Farming Assistant",
-        "frontendVersion": "v1",
-        "showPoweredBy": true,
-        "theme": "prism",
-        "themeColor": "#2563eb"
-    });
-    </script> --}}
+    <script src="assets/js/speakResponse.js"></script>
 
 
 

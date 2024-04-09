@@ -1,6 +1,7 @@
 import express from "express";
 import session from "express-session";
 import path from "path";
+import { fileURLToPath } from 'url';
 import hbs from "hbs";
 import mongoose from "mongoose";
 import axios  from "axios";
@@ -9,14 +10,16 @@ import keys from "./keys/config.cjs";
 import userDetails from "./mongodb.js";
 import farmerNews from "./web-scraping-news.js";
 import farmerNewsEt from "./web-scraping-et.js";
-import translateText from "./translate.cjs";
+import {translateText , translateAndSynthesize, synthesizeText} from "./translate.cjs";
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = process.env.PORT || 3000;
 const rasaUrl = "http://localhost:5005";
 
 
 app.use(express.static('public'));
+app.use(express.static(path.join(__dirname)));
 
 app.use(express.json());
 app.set("view engine","hbs");
@@ -81,6 +84,9 @@ app.get("/home", isAuthenticated, (req, res) => {
     var rasaIsEmpty = combinedData.length === 0;
     res.render("home", {combinedData, rasaIsEmpty, farmerNews, farmerNewsEt})
 });
+
+
+
 
 
 
@@ -253,17 +259,30 @@ app.post("/postRasa", async (req,res)=>{
     }
 
     try {
-        rasaResponse = await translateText(rasaText, lang);
+        rasaResponse = await translateAndSynthesize(rasaText, lang, 'response.mp3');
     } catch (error) {
         console.error('Error:', error);
     }
-    combinedData.unshift({rasaResponse: rasaResponse , userPrompt : userPrompt})
+    combinedData.unshift({rasaResponse: rasaResponse , userPrompt : userPrompt, userLang: lang})
     userPrompts.unshift(userPrompt)
     rasaResponses.unshift(rasaResponse);
-    await updateUserChat(req.session.user.userEmail , combinedData)
+    try {
+        await updateUserChat(req.session.user.userEmail , combinedData)
+    } catch (error) {
+        console.log('Failed to updated chat in mongoBD'+ error);
+    }
     res.redirect("/home")
 })
 
+// synthsising text to audio file
+app.post('/playresponse', async (req, res) => {
+    const { text } = req.body;
+    const { lang } = req.body;
+    const outputFile = 'response.mp3'; // Choose a file name
+    await synthesizeText(text, lang, outputFile);
+    const audioUrl = `http://localhost:3000/${outputFile}`; // Replace your-domain.com with your actual domain
+    res.json(audioUrl);
+});
 
 // Update user chat in DB
 
