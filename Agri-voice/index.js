@@ -65,6 +65,15 @@ app.get("/register",function(req,res){
     res.render("register")
 });
 
+// Define a route to serve the response MP3 file
+app.get('/responsevoice', (req, res) => {
+    res.setHeader('Cache-Control', 'no-store');
+    // Construct the absolute path to response.mp3
+    const filePath = path.join(__dirname, 'response.mp3');
+    // Send the file
+    res.sendFile(filePath);
+});
+
 const isAuthenticated = (req, res, next) => {
     if (req.session.user) {
         // User is authenticated, proceed to the next middleware or route handler
@@ -231,6 +240,7 @@ async function getOpenAiResponse(prompt){
 }
 
 
+  
 
 // Post method from UI when user submits prompt
 

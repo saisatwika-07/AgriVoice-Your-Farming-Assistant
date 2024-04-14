@@ -11,24 +11,39 @@ document.querySelectorAll('.play-response-btn').forEach(button => {
         });
 
         if (response.ok) {
-            var audioUrl = await response.json();
-            var audio = new Audio(audioUrl);
-            
-            // Disable all play buttons
-            document.querySelectorAll('.play-response-btn').forEach(btn => {
-                btn.disabled = true;
-            });
-
-            // Play the audio
-            audio.play();
-
-            // Listen for the 'ended' event to enable buttons when audio completes
-            audio.addEventListener('ended', () => {
-                // Enable all play buttons
+            // Fetch the response MP3 file from the server
+            fetch('/responsevoice')
+            .then(response => {
+                // Check if the response was successful
+                if (!response.ok) {
+                    throw new Error('Failed to fetch audio');
+                }
+                // Return the response as blob
+                return response.blob();
+            })
+            .then(blob => {
+                // Convert the blob to a Blob URL
+                const audioUrl = URL.createObjectURL(blob);
+                // Create an Audio object with the Blob URL
+                const audio = new Audio(audioUrl);
+                // Play the audio
+                audio.play();
+                // Disable all play buttons
                 document.querySelectorAll('.play-response-btn').forEach(btn => {
-                    btn.disabled = false;
+                    btn.disabled = true;
                 });
+                // Listen for the 'ended' event to enable buttons when audio completes
+                audio.addEventListener('ended', () => {
+                    // Enable all play buttons
+                    document.querySelectorAll('.play-response-btn').forEach(btn => {
+                        btn.disabled = false;
+                    });
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
             });
+
         } else {
             console.error('Failed to synthesize audio');
         }
