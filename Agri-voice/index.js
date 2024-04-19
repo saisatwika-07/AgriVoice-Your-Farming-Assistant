@@ -87,11 +87,12 @@ const isAuthenticated = (req, res, next) => {
 var rasaResponses = [];
 var userPrompts = [];
 var combinedData = [];
+var userLanguage = "en-Us";
 
 
 app.get("/home", isAuthenticated, (req, res) => {
     var rasaIsEmpty = combinedData.length === 0;
-    res.render("home", {combinedData, rasaIsEmpty, farmerNews, farmerNewsEt})
+    res.render("home", {combinedData, rasaIsEmpty, farmerNews, farmerNewsEt, userLanguage})
 });
 
 
@@ -247,6 +248,7 @@ async function getOpenAiResponse(prompt){
 app.post("/postRasa", async (req,res)=>{
     let userPrompt = req.body.userInput;
     let lang = req.body.language;
+    userLanguage = lang;
     let engUserPrompt;
     let rasaResponse;
 

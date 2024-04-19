@@ -86,7 +86,7 @@
                             <option value="en-Us">English</option>
                             <option value="te-In">Telugu</option>
                             <option value="ta-In">Tamil</option>
-                            <option value="hi-IN">Hindi</option>
+                            <option value="hi-In">Hindi</option>
                         </select>
                         <div class="" style="display: grid; grid-template-columns:auto 15%; column-gap:10px;">
                             <input type="text" placeholder="Your Question Goes Here" name="userInput" autofocus required id="userInput">
@@ -148,6 +148,11 @@
 
             return false;
         }
+    </script>
+
+    {{!-- Patch user language dynamically --}}
+    <script>
+        document.getElementById("language").value = "{{userLanguage}}";
     </script>
 
 </body>
